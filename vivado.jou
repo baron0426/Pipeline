@@ -2,25 +2,80 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Aug 29 14:15:48 2019
-# Process ID: 16856
-# Current directory: F:/DigitalLogic/exp04Copy
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11860 F:\DigitalLogic\exp04Copy\exp04.xpr
-# Log file: F:/DigitalLogic/exp04Copy/vivado.log
-# Journal file: F:/DigitalLogic/exp04Copy\vivado.jou
+# Start of session at: Thu Aug 29 14:59:49 2019
+# Process ID: 8660
+# Current directory: D:/youzq/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14920 D:\youzq\Pipeline\exp04.xpr
+# Log file: D:/youzq/Pipeline/vivado.log
+# Journal file: D:/youzq/Pipeline\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project F:/DigitalLogic/exp04Copy/exp04.xpr
+open_project D:/youzq/Pipeline/exp04.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 6
 wait_on_run synth_1
+launch_simulation
+open_wave_config D:/youzq/Pipeline/test_cpu_behav_sum.wcfg
+source test_cpu.tcl
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
 reset_run synth_1
 launch_runs synth_1 -jobs 6
 wait_on_run synth_1
-launch_simulation
-open_wave_config F:/DigitalLogic/exp04Copy/test_cpu_behav_sum.wcfg
-source test_cpu.tcl
+relaunch_sim
 restart
-run 650 ns
-close_sim
+run 120 ns
+run 10 ns
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+relaunch_sim
+restart
+run 120 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 200 ns
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}
+save_wave_config {D:/youzq/Pipeline/test_cpu_behav_sum.wcfg}

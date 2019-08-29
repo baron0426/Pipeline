@@ -79,8 +79,11 @@ module CPU(reset, clk);
 	//wire [31:0] WBs_PC;
 	
 	PC pc(.reset(reset), .clk(clk), .PC_next(PC_next), .PC(PC));
+	
 	HazardJumpUnit hazard_jump(.PC(PC), .stall(stall), .Jump(IDs_Jump), .Branch(Branch), .BranchCond(BranchCond), 
-	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .IFIDFlush(IFIDFlush), .IDEXFlush(IDEXFlush), .PC_next(PC_next));
+	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(0), .Exception(0),
+	.IFIDFlush(IFIDFlush), .IDEXFlush(IDEXFlush), .PC_next(PC_next));
+	
 	ForwardingUnit forward(.stall(stall), .BranchSrcA(BranchSrcA), .BranchSrcB(BranchSrcB),
 	.Forward1(Forward1), .Forward2(Forward2), .MEM_RegWrite(MEMs_RegWrite), .WB_RegWrite(WBs_RegWrite), 
 	.MEM_RegDest(MEMs_RegDest), .WB_RegDest(WBs_RegDest), .MEM_MemRead(MEMs_MemRead), 

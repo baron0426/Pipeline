@@ -83,12 +83,13 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	wire BranchCond_bltz;
 
 	assign BranchCond_beq = (branchCmpA == branchCmpB) ? 1'b1 : 1'b0;
-	assign BranchCond_bgtz = (branchCmpA > 32'h0) ? 1'b1 : 1'b0;
-	assign BranchCond_bltz = (branchCmpA < 32'h0) ? 1'b1 : 1'b0;
-	
-	assign BranchCond_bne = ~BranchCond_beq;
+	assign BranchCond_bgez = (branchCmpA[31] == 0) ? 1'b1 : 1'b0;
+	assign BranchCond_bltz = ~BranchCond_bgez;
+	assign BranchCond_bgtz = BranchCond_bgez && (branchCmpA != 32'h0);
 	assign BranchCond_blez = ~BranchCond_bgtz;
-	assign BranchCond_bgez = ~BranchCond_bltz;
+	assign BranchCond_bne = ~BranchCond_beq;
+	
+	
 	
 	assign BranchCond = 
 		(BranchType == 3'b001) ? BranchCond_beq :

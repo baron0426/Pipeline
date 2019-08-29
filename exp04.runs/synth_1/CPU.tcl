@@ -22,29 +22,29 @@ create_project -in_memory -part xc7a35tcpg236-3
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir F:/DigitalLogic/exp04Copy/exp04.cache/wt [current_project]
-set_property parent.project_path F:/DigitalLogic/exp04Copy/exp04.xpr [current_project]
+set_property webtalk.parent_dir D:/youzq/Pipeline/exp04.cache/wt [current_project]
+set_property parent.project_path D:/youzq/Pipeline/exp04.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo f:/DigitalLogic/exp04Copy/exp04.cache/ip [current_project]
+set_property ip_output_repo d:/youzq/Pipeline/exp04.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  F:/DigitalLogic/exp04Copy/src/ALU.v
-  F:/DigitalLogic/exp04Copy/src/ALUControl.v
-  F:/DigitalLogic/exp04Copy/src/Control.v
-  F:/DigitalLogic/exp04Copy/src/DataMemory.v
-  F:/DigitalLogic/exp04Copy/src/EX.v
-  F:/DigitalLogic/exp04Copy/src/Forward.v
-  F:/DigitalLogic/exp04Copy/src/ID.v
-  F:/DigitalLogic/exp04Copy/src/IF.v
-  F:/DigitalLogic/exp04Copy/src/InstructionMemory.v
-  F:/DigitalLogic/exp04Copy/src/MEM.v
-  F:/DigitalLogic/exp04Copy/src/PC.v
-  F:/DigitalLogic/exp04Copy/src/RegisterFile.v
-  F:/DigitalLogic/exp04Copy/src/StateRegisters.v
-  F:/DigitalLogic/exp04Copy/src/WB.v
-  F:/DigitalLogic/exp04Copy/src/hazardjump.v
-  F:/DigitalLogic/exp04Copy/src/CPU.v
+  D:/youzq/Pipeline/src/ALU.v
+  D:/youzq/Pipeline/src/ALUControl.v
+  D:/youzq/Pipeline/src/Control.v
+  D:/youzq/Pipeline/src/DataMemory.v
+  D:/youzq/Pipeline/src/EX.v
+  D:/youzq/Pipeline/src/Forward.v
+  D:/youzq/Pipeline/src/ID.v
+  D:/youzq/Pipeline/src/IF.v
+  D:/youzq/Pipeline/src/InstructionMemory.v
+  D:/youzq/Pipeline/src/MEM.v
+  D:/youzq/Pipeline/src/PC.v
+  D:/youzq/Pipeline/src/RegisterFile.v
+  D:/youzq/Pipeline/src/StateRegisters.v
+  D:/youzq/Pipeline/src/WB.v
+  D:/youzq/Pipeline/src/hazardjump.v
+  D:/youzq/Pipeline/src/CPU.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

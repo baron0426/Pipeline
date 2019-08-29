@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="610850000fs"></ZoomStartTime>
-      <ZoomEndTime time="657850001fs"></ZoomEndTime>
-      <Cursor1Time time="647900000fs"></Cursor1Time>
+      <ZoomStartTime time="370020000fs"></ZoomStartTime>
+      <ZoomEndTime time="421220001fs"></ZoomEndTime>
+      <Cursor1Time time="404320000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="307"></NameColumnWidth>
-      <ValueColumnWidth column_width="203"></ValueColumnWidth>
+      <ValueColumnWidth column_width="197"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="84" />
+   <WVObjectSize size="68" />
    <wvobject fp_name="/test_cpu/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -68,14 +68,6 @@
    <wvobject fp_name="/test_cpu/cpu1/forward/BranchSrcB" type="array">
       <obj_property name="ElementShortName">BranchSrcB[1:0]</obj_property>
       <obj_property name="ObjectShortName">BranchSrcB[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/forward/Forward1" type="array">
-      <obj_property name="ElementShortName">Forward1[1:0]</obj_property>
-      <obj_property name="ObjectShortName">Forward1[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/forward/Forward2" type="array">
-      <obj_property name="ElementShortName">Forward2[1:0]</obj_property>
-      <obj_property name="ObjectShortName">Forward2[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/hazard_jump/Jump" type="array">
       <obj_property name="ElementShortName">Jump[1:0]</obj_property>
@@ -181,25 +173,9 @@
       <obj_property name="ElementShortName">PC_next[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_next[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/RegWrite" type="logic">
-      <obj_property name="ElementShortName">RegWrite</obj_property>
-      <obj_property name="ObjectShortName">RegWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/RegDest" type="array">
-      <obj_property name="ElementShortName">RegDest[4:0]</obj_property>
-      <obj_property name="ObjectShortName">RegDest[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/MemRead" type="logic">
-      <obj_property name="ElementShortName">MemRead</obj_property>
-      <obj_property name="ObjectShortName">MemRead</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/MemWrite" type="logic">
-      <obj_property name="ElementShortName">MemWrite</obj_property>
-      <obj_property name="ObjectShortName">MemWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/MemtoReg" type="array">
-      <obj_property name="ElementShortName">MemtoReg[1:0]</obj_property>
-      <obj_property name="ObjectShortName">MemtoReg[1:0]</obj_property>
+   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/ID_EX/ALUSrc1" type="logic">
       <obj_property name="ElementShortName">ALUSrc1</obj_property>
@@ -209,53 +185,41 @@
       <obj_property name="ElementShortName">ALUSrc2</obj_property>
       <obj_property name="ObjectShortName">ALUSrc2</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/ALUCtl" type="array">
-      <obj_property name="ElementShortName">ALUCtl[4:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUCtl[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/ALU_sign" type="logic">
-      <obj_property name="ElementShortName">ALU_sign</obj_property>
-      <obj_property name="ObjectShortName">ALU_sign</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/ID_EX/shamt" type="array">
       <obj_property name="ElementShortName">shamt[4:0]</obj_property>
       <obj_property name="ObjectShortName">shamt[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/DataBusA" type="array">
-      <obj_property name="ElementShortName">DataBusA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DataBusA[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/DataBusB" type="array">
-      <obj_property name="ElementShortName">DataBusB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DataBusB[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/ID_EX/Imm" type="array">
       <obj_property name="ElementShortName">Imm[31:0]</obj_property>
       <obj_property name="ObjectShortName">Imm[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/rs" type="array">
-      <obj_property name="ElementShortName">rs[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rs[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/ID_EX/rt" type="array">
-      <obj_property name="ElementShortName">rt[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rt[4:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/ID_EX/PC_EX" type="array">
       <obj_property name="ElementShortName">PC_EX[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_EX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/forward/Forward1" type="array">
+      <obj_property name="ElementShortName">Forward1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Forward1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/ID_EX/rs" type="array">
+      <obj_property name="ElementShortName">rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs[4:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/EXs/ALU_in1" type="array">
       <obj_property name="ElementShortName">ALU_in1[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_in1[31:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/forward/Forward2" type="array">
+      <obj_property name="ElementShortName">Forward2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Forward2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/ID_EX/rt" type="array">
+      <obj_property name="ElementShortName">rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rt[4:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/EXs/ALU_in2" type="array">
       <obj_property name="ElementShortName">ALU_in2[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_in2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_RegWrite" type="logic">
       <obj_property name="ElementShortName">EX_RegWrite</obj_property>
@@ -264,6 +228,10 @@
    <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_RegDest" type="array">
       <obj_property name="ElementShortName">EX_RegDest[4:0]</obj_property>
       <obj_property name="ObjectShortName">EX_RegDest[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_ALUOut" type="array">
+      <obj_property name="ElementShortName">EX_ALUOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_ALUOut[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_MemRead" type="logic">
       <obj_property name="ElementShortName">EX_MemRead</obj_property>
@@ -277,41 +245,9 @@
       <obj_property name="ElementShortName">EX_MemtoReg[1:0]</obj_property>
       <obj_property name="ObjectShortName">EX_MemtoReg[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_ALUOut" type="array">
-      <obj_property name="ElementShortName">EX_ALUOut[31:0]</obj_property>
-      <obj_property name="ObjectShortName">EX_ALUOut[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/EX_MEM/EX_WrData" type="array">
       <obj_property name="ElementShortName">EX_WrData[31:0]</obj_property>
       <obj_property name="ObjectShortName">EX_WrData[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_RegWrite" type="logic">
-      <obj_property name="ElementShortName">MEM_RegWrite</obj_property>
-      <obj_property name="ObjectShortName">MEM_RegWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_RegDest" type="array">
-      <obj_property name="ElementShortName">MEM_RegDest[4:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_RegDest[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_MemRead" type="logic">
-      <obj_property name="ElementShortName">MEM_MemRead</obj_property>
-      <obj_property name="ObjectShortName">MEM_MemRead</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_MemWrite" type="logic">
-      <obj_property name="ElementShortName">MEM_MemWrite</obj_property>
-      <obj_property name="ObjectShortName">MEM_MemWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_MemtoReg" type="logic">
-      <obj_property name="ElementShortName">MEM_MemtoReg</obj_property>
-      <obj_property name="ObjectShortName">MEM_MemtoReg</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_ALUOut" type="array">
-      <obj_property name="ElementShortName">MEM_ALUOut[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_ALUOut[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/EX_MEM/MEM_WrData" type="array">
-      <obj_property name="ElementShortName">MEM_WrData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_WrData[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/MEM_WB/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
