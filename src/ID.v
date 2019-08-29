@@ -1,7 +1,7 @@
 module ID(reset, clk, RegWrEn, RegWBDst, DataBusC, 
 Instruction, MEMForwardSrc, WBForwardSrc, BranchSrcA, BranchSrcB, BranchCond, 
 RegWrite, RegDest, MemRead, MemWrite, MemtoReg, ALUSrc1, ALUSrc2, ALUCtl, ALU_Sign, 
-shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, Branch);
+shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, Branch, Exception);
 	/*From WriteBack Stage: For numbers to write back to register file*/
 	input reset;
 	input clk;
@@ -25,6 +25,7 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	output wire BranchCond;
 	output wire [31:0] JumpTarget;
 	assign JumpTarget = (Jump != 2'b00) ? {PC[31:28], Instruction[25:0], 2'b00} : (PC + 32'd4 + ({{14{Instruction[15]}},Instruction[15:0],2'b00}));
+	output Exception;
 	
 	/*To IDEX register*/
 	output wire RegWrite;
@@ -89,8 +90,6 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	assign BranchCond_blez = ~BranchCond_bgtz;
 	assign BranchCond_bne = ~BranchCond_beq;
 	
-	
-	
 	assign BranchCond = 
 		(BranchType == 3'b001) ? BranchCond_beq :
 		(BranchType == 3'b010) ? BranchCond_bne :
@@ -98,6 +97,7 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 		(BranchType == 3'b100) ? BranchCond_bgtz :
 		(BranchType == 3'b101) ? BranchCond_bltz :
 		(BranchType == 3'b110) ? BranchCond_bgez : 1'b0;
-		
+	//Handle Exception and Interruption
+	assign Exception = 0;	
 		
 endmodule

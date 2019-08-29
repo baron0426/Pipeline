@@ -78,10 +78,14 @@ module CPU(reset, clk);
 	wire [31:0] WB_ID_WriteBackData;
 	//wire [31:0] WBs_PC;
 	
+	/*Exception and Interruption*/
+	wire Exception;
+	wire Interruption;
+	
 	PC pc(.reset(reset), .clk(clk), .PC_next(PC_next), .PC(PC));
 	
 	HazardJumpUnit hazard_jump(.PC(PC), .stall(stall), .Jump(IDs_Jump), .Branch(Branch), .BranchCond(BranchCond), 
-	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(0), .Exception(0),
+	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(0), .Exception(Exception),
 	.IFIDFlush(IFIDFlush), .IDEXFlush(IDEXFlush), .PC_next(PC_next));
 	
 	ForwardingUnit forward(.stall(stall), .BranchSrcA(BranchSrcA), .BranchSrcB(BranchSrcB),
@@ -100,7 +104,7 @@ module CPU(reset, clk);
 	.RegWrite(IDs_RegWrite), .RegDest(IDs_RegDest), .MemRead(IDs_MemRead), .MemWrite(IDs_MemWrite), .MemtoReg(IDs_MemtoReg), 
 	.ALUSrc1(IDs_ALUSrc1), .ALUSrc2(IDs_ALUSrc2), .ALUCtl(IDs_ALUCtl), .ALU_Sign(IDs_ALU_sign), 
 	.shamt(IDs_shamt), .Imm(IDs_Imm), .rs(IDs_rs), .rt(IDs_rt), .branchCmpA(branchCmpA),.branchCmpB(IDs_DataBusB), .JumpTarget(JumpTarget),
-	.Jump(IDs_Jump), .EXForwardSrc(MEMR_ALUOut), .PC(IDs_PC), .Branch(Branch));
+	.Jump(IDs_Jump), .EXForwardSrc(MEMR_ALUOut), .PC(IDs_PC), .Branch(Branch), .Exception(Exception));
     
 	IDEXR ID_EX(.reset(IDEXFlush), .clk(clk), .RegWrite_next(IDs_RegWrite), .RegDest_next(IDs_RegDest), .MemRead_next(IDs_MemRead), .MemWrite_next(IDs_MemWrite), 
 	.MemtoReg_next(IDs_MemtoReg), .ALUSrc1_next(IDs_ALUSrc1), .ALUSrc2_next(IDs_ALUSrc2), .ALUCtl_next(IDs_ALUCtl), .ALU_sign_next(IDs_ALU_sign), .shamt_next(IDs_shamt), .DataBusA_next(branchCmpA), .DataBusB_next(IDs_DataBusB), .Imm_next(IDs_Imm), 

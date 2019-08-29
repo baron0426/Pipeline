@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="370020000fs"></ZoomStartTime>
-      <ZoomEndTime time="421220001fs"></ZoomEndTime>
-      <Cursor1Time time="404320000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="199500001fs"></ZoomEndTime>
+      <Cursor1Time time="50000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="307"></NameColumnWidth>
@@ -51,7 +51,6 @@
    <wvobject fp_name="/test_cpu/cpu1/IDs/register_file1/RF_data" type="array">
       <obj_property name="ElementShortName">RF_data[31:1][31:0]</obj_property>
       <obj_property name="ObjectShortName">RF_data[31:1][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/forward/stall" type="logic">
       <obj_property name="ElementShortName">stall</obj_property>

@@ -10,7 +10,7 @@ module IFIDR (reset, clk, Instruction, PC, Instruction_next, PC_next);
 	if (reset)
 		begin
 		Instruction <= 32'h00000000;
-		PC <= 32'h00000000;
+		//PC <= 32'h00000000;
 		end
 	else
 		begin
