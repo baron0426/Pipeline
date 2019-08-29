@@ -1,0 +1,39 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/Forward.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/StateRegisters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFIDR
+INFO: [VRFC 10-311] analyzing module IDEXR
+INFO: [VRFC 10-311] analyzing module EXMEMR
+INFO: [VRFC 10-311] analyzing module MEMWBR
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/hazardjump.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardJumpUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/src/test_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
