@@ -1,7 +1,8 @@
 module ID(reset, clk, RegWrEn, RegWBDst, DataBusC, 
 Instruction, MEMForwardSrc, WBForwardSrc, BranchSrcA, BranchSrcB, BranchCond, 
 RegWrite, RegDest, MemRead, MemWrite, MemtoReg, ALUSrc1, ALUSrc2, ALUCtl, ALU_Sign, 
-shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, Branch, Exception);
+shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, Branch, Exception, Interrupt);
+	input Interrupt;
 	/*From WriteBack Stage: For numbers to write back to register file*/
 	input reset;
 	input clk;
@@ -57,7 +58,7 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	.OpCode(Instruction[31:26]), .Funct(Instruction[5:0]), .RegimmFunct(RegimmFunct),
 	.PCSrc(Jump), .Branch(BranchType), .RegWrite(RegWrite), .RegDst(RegDst), 
 	.MemRead(MemRead),	.MemWrite(MemWrite), .MemtoReg(MemtoReg),
-	.ALUSrc1(ALUSrc1), .ALUSrc2(ALUSrc2), .ExtOp(ExtOp), .LuOp(LuOp),	.ALUOp(ALUOp));
+	.ALUSrc1(ALUSrc1), .ALUSrc2(ALUSrc2), .ExtOp(ExtOp), .LuOp(LuOp),.ALUOp(ALUOp),.Exception(Exception));
 	
 	ALUControl alu_control_inst(.ALUOp(ALUOp), .Funct(Instruction[5:0]), .ALUCtl(ALUCtl), .Sign(ALU_Sign));
 	assign RegDest = (RegDst == 2'b00)? Instruction[20:16]: (RegDst == 2'b01)? Instruction[15:11]: 5'b11111;
@@ -97,7 +98,7 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 		(BranchType == 3'b100) ? BranchCond_bgtz :
 		(BranchType == 3'b101) ? BranchCond_bltz :
 		(BranchType == 3'b110) ? BranchCond_bgez : 1'b0;
-	//Handle Exception and Interruption
-	assign Exception = 0;	
+	/*Handle Exception and Interruption*/
+	//assign Exception = 0;	
 		
 endmodule

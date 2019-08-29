@@ -2,7 +2,7 @@
 module Control(OpCode, Funct, RegimmFunct,
 	PCSrc, Branch, RegWrite, RegDst, 
 	MemRead, MemWrite, MemtoReg, 
-	ALUSrc1, ALUSrc2, ExtOp, LuOp, ALUOp);
+	ALUSrc1, ALUSrc2, ExtOp, LuOp, ALUOp, Exception);
 	input [5:0] OpCode;
 	input [5:0] Funct;
 	input [2:0] RegimmFunct;
@@ -18,6 +18,7 @@ module Control(OpCode, Funct, RegimmFunct,
 	output ExtOp;
 	output LuOp;
 	output [3:0] ALUOp;
+	output Exception;
 	
 	// Your code below
 	
@@ -82,6 +83,11 @@ module Control(OpCode, Funct, RegimmFunct,
 		(OpCode == 6'h00) ? 1'bX :
 		(OpCode == 6'h02 || OpCode == 6'h03) ? 1'bx :
 		1'b0;
+		
+	assign Exception = 
+	     (OpCode == 6'h23 || OpCode == 6'h2b || OpCode == 6'h0f) ? 1'b0 : 
+	     (OpCode >= 6'h00 && OpCode <= 6'h0c) ? 1'b0 :
+	     1'b1;
 	
 	// Your code above
 	
