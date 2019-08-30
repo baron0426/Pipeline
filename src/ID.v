@@ -25,7 +25,9 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	output wire Branch;
 	output wire BranchCond;
 	output wire [31:0] JumpTarget;
-	assign JumpTarget = (Jump != 2'b00) ? {PC[31:28], Instruction[25:0], 2'b00} : (PC + 32'd4 + ({{14{Instruction[15]}},Instruction[15:0],2'b00}));
+	wire [31:0] JumpTarget_temp;
+	assign JumpTarget_temp = (Jump != 2'b00) ? {PC[31:28], Instruction[25:0], 2'b00} : (PC + 32'd4 + ({{14{Instruction[15]}},Instruction[15:0],2'b00}));
+	assign JumpTarget = {PC[31], JumpTarget_temp[30:0]};
 	output Exception;
 	
 	/*To IDEX register*/
