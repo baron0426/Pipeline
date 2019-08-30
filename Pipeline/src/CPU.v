@@ -97,7 +97,7 @@ module CPU(reset, clk);
 
 	IF IFs(.PC_in(PC), .IFIDFlush(IFIDFlush), .Instruction(IFs_Instruction));
 	
-	IFIDR IF_ID(.reset(IFIDFlush_in), .clk(clk), .Instruction(IDs_Instruction), .Instruction_next(IFs_Instruction), .PC(IDs_PC), .PC_next(PC));
+	IFIDR IF_ID(.reset(IFIDFlush_in), .stall(stall), .clk(clk), .Instruction(IDs_Instruction), .Instruction_next(IFs_Instruction), .PC(IDs_PC), .PC_next(PC));
 	
 	ID IDs(.reset(reset), .clk(clk), .RegWrEn(WBs_RegWrite), .RegWBDst(WBs_RegDest), .DataBusC(WB_ID_WriteBackData), 
 	.Instruction(IDs_Instruction), .MEMForwardSrc(MEMs_ALUOut), .WBForwardSrc(WB_ID_WriteBackData), .BranchSrcA(BranchSrcA), .BranchSrcB(BranchSrcB), .BranchCond(BranchCond), 

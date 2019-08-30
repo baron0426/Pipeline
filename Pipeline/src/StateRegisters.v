@@ -1,6 +1,7 @@
-module IFIDR (reset, clk, Instruction, PC, Instruction_next, PC_next);
+module IFIDR (reset, stall ,clk, Instruction, PC, Instruction_next, PC_next);
 	input reset; 
 	input clk;
+	input stall;
 	input [31:0] Instruction_next; 
 	input [31:0] PC_next;
 	output reg [31:0] Instruction; 
@@ -13,7 +14,7 @@ module IFIDR (reset, clk, Instruction, PC, Instruction_next, PC_next);
 		//For retaining PC when stalled.
 		//PC <= 32'h00000000;
 		end
-	else
+	else if (~stall)
 		begin
 		Instruction <= Instruction_next;
 		PC <= {((PC_next == 32'h80000000) ? 1'b0 : PC_next[31]) ,PC_next[30:0]};
@@ -61,7 +62,23 @@ RegWrite, RegDest, MemRead, MemWrite, MemtoReg, ALUSrc1, ALUSrc2, ALUCtl, ALU_si
 	output reg [31:0] PC_EX;
 	always @(posedge clk)
 	begin
-	if (reset)
+		RegWrite <= RegWrite_next;
+		RegDest <= RegDest_next;
+		MemRead <= MemRead_next;
+		MemWrite <= MemWrite_next;
+		MemtoReg <= MemtoReg_next;
+		ALUSrc1 <= ALUSrc1_next;
+		ALUSrc2 <= ALUSrc2_next;
+		ALUCtl <= ALUCtl_next;
+		ALU_sign <= ALU_sign_next;
+		shamt <= shamt_next;
+		DataBusA <= DataBusA_next;
+		DataBusB <= DataBusB_next;
+		Imm <= Imm_next;
+		rs <= rs_next;
+		rt <= rt_next;
+		PC_EX <= PC_next; 
+		if (reset)
 		begin
 		RegWrite <= 1'b0;
 		RegDest <= 5'b0;
@@ -79,25 +96,6 @@ RegWrite, RegDest, MemRead, MemWrite, MemtoReg, ALUSrc1, ALUSrc2, ALUCtl, ALU_si
 		rs <= 5'b0;
 		rt <= 5'b0;
 		PC_EX <= 32'b0;
-		end
-	else
-		begin
-		RegWrite <= RegWrite_next;
-		RegDest <= RegDest_next;
-		MemRead <= MemRead_next;
-		MemWrite <= MemWrite_next;
-		MemtoReg <= MemtoReg_next;
-		ALUSrc1 <= ALUSrc1_next;
-		ALUSrc2 <= ALUSrc2_next;
-		ALUCtl <= ALUCtl_next;
-		ALU_sign <= ALU_sign_next;
-		shamt <= shamt_next;
-		DataBusA <= DataBusA_next;
-		DataBusB <= DataBusB_next;
-		Imm <= Imm_next;
-		rs <= rs_next;
-		rt <= rt_next;
-		PC_EX <= PC_next; 
 		end
 	end
 endmodule

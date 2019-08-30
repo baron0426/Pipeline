@@ -23,35 +23,35 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/youzq/Pipeline/Pipeline/exp04.cache/wt [current_project]
-set_property parent.project_path D:/youzq/Pipeline/Pipeline/exp04.xpr [current_project]
+set_property webtalk.parent_dir D:/Baron/Pipeline/Pipeline/exp04.cache/wt [current_project]
+set_property parent.project_path D:/Baron/Pipeline/Pipeline/exp04.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/youzq/Pipeline/Pipeline/exp04.cache/ip [current_project]
+set_property ip_output_repo d:/Baron/Pipeline/Pipeline/exp04.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files D:/youzq/Pipeline/Pipeline/SortData_dist_mem_gen_0_0.coe
-add_files d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/123.coe
+add_files D:/Baron/Pipeline/Pipeline/SortData_dist_mem_gen_0_0.coe
+add_files D:/Baron/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/123.coe
 read_verilog -library xil_defaultlib {
-  D:/youzq/Pipeline/Pipeline/src/ALU.v
-  D:/youzq/Pipeline/Pipeline/src/ALUControl.v
-  D:/youzq/Pipeline/Pipeline/src/Control.v
-  D:/youzq/Pipeline/Pipeline/src/DataMemory.v
-  D:/youzq/Pipeline/Pipeline/src/EX.v
-  D:/youzq/Pipeline/Pipeline/src/Forward.v
-  D:/youzq/Pipeline/Pipeline/src/ID.v
-  D:/youzq/Pipeline/Pipeline/src/IF.v
-  D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v
-  D:/youzq/Pipeline/Pipeline/src/MEM.v
-  D:/youzq/Pipeline/Pipeline/src/PC.v
-  D:/youzq/Pipeline/Pipeline/src/RegisterFile.v
-  D:/youzq/Pipeline/Pipeline/src/StateRegisters.v
-  D:/youzq/Pipeline/Pipeline/src/WB.v
-  D:/youzq/Pipeline/Pipeline/src/hazardjump.v
-  D:/youzq/Pipeline/Pipeline/src/CPU.v
+  D:/Baron/Pipeline/Pipeline/src/ALU.v
+  D:/Baron/Pipeline/Pipeline/src/ALUControl.v
+  D:/Baron/Pipeline/Pipeline/src/Control.v
+  D:/Baron/Pipeline/Pipeline/src/DataMemory.v
+  D:/Baron/Pipeline/Pipeline/src/EX.v
+  D:/Baron/Pipeline/Pipeline/src/Forward.v
+  D:/Baron/Pipeline/Pipeline/src/ID.v
+  D:/Baron/Pipeline/Pipeline/src/IF.v
+  D:/Baron/Pipeline/Pipeline/src/InstructionMemory.v
+  D:/Baron/Pipeline/Pipeline/src/MEM.v
+  D:/Baron/Pipeline/Pipeline/src/PC.v
+  D:/Baron/Pipeline/Pipeline/src/RegisterFile.v
+  D:/Baron/Pipeline/Pipeline/src/StateRegisters.v
+  D:/Baron/Pipeline/Pipeline/src/WB.v
+  D:/Baron/Pipeline/Pipeline/src/hazardjump.v
+  D:/Baron/Pipeline/Pipeline/src/CPU.v
 }
-add_files D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/SortData.bd
-set_property used_in_implementation false [get_files -all d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/SortData_dist_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/SortData_ooc.xdc]
+add_files D:/Baron/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/SortData.bd
+set_property used_in_implementation false [get_files -all d:/Baron/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/SortData_dist_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all D:/Baron/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/SortData_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

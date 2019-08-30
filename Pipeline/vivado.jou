@@ -41,3 +41,39 @@ run 10 ns
 restart
 run 210 ns
 run 10 ns
+save_wave_config {D:/Baron/Pipeline/Pipeline/test_cpu_behav_sum.wcfg}
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+relaunch_sim
+restart
+run 210 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 22000 ns
+restart
+run 2200 ns
+restart
+run 650 ns
+restart
+run 220 ns
+run 220 ns
+restart
+run 220 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+run 210 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+save_wave_config {D:/Baron/Pipeline/Pipeline/test_cpu_behav_sum.wcfg}
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1

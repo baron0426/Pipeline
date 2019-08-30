@@ -39,5 +39,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Baron/Pipeline/Pipeline/src/haza
 INFO: [VRFC 10-311] analyzing module HazardJumpUnit
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Baron/Pipeline/Pipeline/src/test_cpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_cpu
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Baron/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
