@@ -22,7 +22,7 @@ module RegisterFile(reset, clk, RegWrite, Read_register1, Read_register2, Write_
 			    end
 			    else if(i==29)
 			    begin
-			     RF_data[i] <= 32'h00003ffc;
+			     RF_data[i] <= 32'h000007fc;
 			    end
 			    else
 			    begin
