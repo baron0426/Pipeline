@@ -2,10 +2,11 @@
 module Control(OpCode, Funct, RegimmFunct,
 	PCSrc, Branch, RegWrite, RegDst, 
 	MemRead, MemWrite, MemtoReg, 
-	ALUSrc1, ALUSrc2, ExtOp, LuOp, ALUOp, Exception);
+	ALUSrc1, ALUSrc2, ExtOp, LuOp, ALUOp, Exception, Interrupt);
 	input [5:0] OpCode;
 	input [5:0] Funct;
 	input [2:0] RegimmFunct;
+	input Interrupt;
 	output [1:0] PCSrc;
 	output [2:0] Branch;
 	output RegWrite;
@@ -54,6 +55,7 @@ module Control(OpCode, Funct, RegimmFunct,
 	assign MemWrite = 
 		(OpCode == 6'h2b) ? 1 : 0;
 	assign MemtoReg[1:0] = 
+	    (Exception || Interrupt) ? 2'b10 :
 		(OpCode == 6'h23) ? 2'b01 :
 		(OpCode == 6'h03) ? 2'b10 :
 		(OpCode == 6'h01) ? 2'b10 :

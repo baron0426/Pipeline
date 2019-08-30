@@ -1,14 +1,12 @@
 #-----------------------------------------------------------
-# Webtalk v2017.3 (64-bit)
-# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
-# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Mon Aug 26 18:56:44 2019
-# Process ID: 14352
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Aug 28 22:54:23 2019
+# Process ID: 11224
 # Current directory: D:/Baron/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/Baron/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Baron/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/Baron/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source D:/Baron/DigitalLogic/exp04Copy/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
-webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 52.297 ; gain = 1.371
-INFO: [Common 17-206] Exiting Webtalk at Mon Aug 26 18:56:50 2019...
