@@ -17,27 +17,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1020 
+INFO: Helper process launched with PID 868 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 370.098 ; gain = 101.820
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 368.879 ; gain = 95.438
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/youzq/Pipeline/src/CPU.v:1]
-INFO: [Synth 8-6157] synthesizing module 'PC' [D:/youzq/Pipeline/src/PC.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [D:/youzq/Pipeline/src/PC.v:1]
-INFO: [Synth 8-6157] synthesizing module 'HazardJumpUnit' [D:/youzq/Pipeline/src/hazardjump.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'HazardJumpUnit' (2#1) [D:/youzq/Pipeline/src/hazardjump.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/youzq/Pipeline/src/Forward.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (3#1) [D:/youzq/Pipeline/src/Forward.v:1]
-INFO: [Synth 8-6157] synthesizing module 'IF' [D:/youzq/Pipeline/src/IF.v:1]
-INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/youzq/Pipeline/src/InstructionMemory.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (4#1) [D:/youzq/Pipeline/src/InstructionMemory.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'IF' (5#1) [D:/youzq/Pipeline/src/IF.v:1]
-INFO: [Synth 8-6157] synthesizing module 'IFIDR' [D:/youzq/Pipeline/src/StateRegisters.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'IFIDR' (6#1) [D:/youzq/Pipeline/src/StateRegisters.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ID' [D:/youzq/Pipeline/src/ID.v:1]
-INFO: [Synth 8-6157] synthesizing module 'Control' [D:/youzq/Pipeline/src/Control.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Control' (7#1) [D:/youzq/Pipeline/src/Control.v:2]
-INFO: [Synth 8-6157] synthesizing module 'ALUControl' [D:/youzq/Pipeline/src/ALUControl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/youzq/Pipeline/Pipeline/src/CPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/youzq/Pipeline/Pipeline/src/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [D:/youzq/Pipeline/Pipeline/src/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'HazardJumpUnit' [D:/youzq/Pipeline/Pipeline/src/hazardjump.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'HazardJumpUnit' (2#1) [D:/youzq/Pipeline/Pipeline/src/hazardjump.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/youzq/Pipeline/Pipeline/src/Forward.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (3#1) [D:/youzq/Pipeline/Pipeline/src/Forward.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF' [D:/youzq/Pipeline/Pipeline/src/IF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (4#1) [D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF' (5#1) [D:/youzq/Pipeline/Pipeline/src/IF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFIDR' [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFIDR' (6#1) [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID' [D:/youzq/Pipeline/Pipeline/src/ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Control' [D:/youzq/Pipeline/Pipeline/src/Control.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Control' (7#1) [D:/youzq/Pipeline/Pipeline/src/Control.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [D:/youzq/Pipeline/Pipeline/src/ALUControl.v:2]
 	Parameter aluAND bound to: 5'b00000 
 	Parameter aluOR bound to: 5'b00001 
 	Parameter aluADD bound to: 5'b00010 
@@ -48,21 +49,21 @@ INFO: [Synth 8-6157] synthesizing module 'ALUControl' [D:/youzq/Pipeline/src/ALU
 	Parameter aluSLL bound to: 5'b10000 
 	Parameter aluSRL bound to: 5'b11000 
 	Parameter aluSRA bound to: 5'b11001 
-INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [D:/youzq/Pipeline/src/ALUControl.v:2]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [D:/youzq/Pipeline/src/RegisterFile.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (9#1) [D:/youzq/Pipeline/src/RegisterFile.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ID' (10#1) [D:/youzq/Pipeline/src/ID.v:1]
-INFO: [Synth 8-6157] synthesizing module 'IDEXR' [D:/youzq/Pipeline/src/StateRegisters.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'IDEXR' (11#1) [D:/youzq/Pipeline/src/StateRegisters.v:24]
-INFO: [Synth 8-6157] synthesizing module 'EX' [D:/youzq/Pipeline/src/EX.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/youzq/Pipeline/src/ALU.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (12#1) [D:/youzq/Pipeline/src/ALU.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'EX' (13#1) [D:/youzq/Pipeline/src/EX.v:1]
-INFO: [Synth 8-6157] synthesizing module 'EXMEMR' [D:/youzq/Pipeline/src/StateRegisters.v:106]
-INFO: [Synth 8-6155] done synthesizing module 'EXMEMR' (14#1) [D:/youzq/Pipeline/src/StateRegisters.v:106]
-INFO: [Synth 8-6157] synthesizing module 'MEM' [D:/youzq/Pipeline/src/MEM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'SortData' [D:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
-INFO: [Synth 8-638] synthesizing module 'SortData_dist_mem_gen_0_0' [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [D:/youzq/Pipeline/Pipeline/src/ALUControl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [D:/youzq/Pipeline/Pipeline/src/RegisterFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (9#1) [D:/youzq/Pipeline/Pipeline/src/RegisterFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (10#1) [D:/youzq/Pipeline/Pipeline/src/ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IDEXR' [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'IDEXR' (11#1) [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:24]
+INFO: [Synth 8-6157] synthesizing module 'EX' [D:/youzq/Pipeline/Pipeline/src/EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/youzq/Pipeline/Pipeline/src/ALU.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (12#1) [D:/youzq/Pipeline/Pipeline/src/ALU.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (13#1) [D:/youzq/Pipeline/Pipeline/src/EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXMEMR' [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEMR' (14#1) [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:106]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [D:/youzq/Pipeline/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SortData' [D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
+INFO: [Synth 8-638] synthesizing module 'SortData_dist_mem_gen_0_0' [d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
 	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
@@ -95,19 +96,19 @@ INFO: [Synth 8-638] synthesizing module 'SortData_dist_mem_gen_0_0' [d:/youzq/Pi
 	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
 	Parameter C_WIDTH bound to: 32 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'd:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ipshared/d46a/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:132]
-INFO: [Synth 8-256] done synthesizing module 'SortData_dist_mem_gen_0_0' (18#1) [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
-INFO: [Synth 8-6155] done synthesizing module 'SortData' (19#1) [D:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
-INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/youzq/Pipeline/src/DataMemory.v:2]
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'd:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ipshared/d46a/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'SortData_dist_mem_gen_0_0' (18#1) [d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+INFO: [Synth 8-6155] done synthesizing module 'SortData' (19#1) [D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/youzq/Pipeline/Pipeline/src/DataMemory.v:2]
 	Parameter RAM_SIZE bound to: 512 - type: integer 
 	Parameter RAM_SIZE_BIT bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (20#1) [D:/youzq/Pipeline/src/DataMemory.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'MEM' (21#1) [D:/youzq/Pipeline/src/MEM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MEMWBR' [D:/youzq/Pipeline/src/StateRegisters.v:135]
-INFO: [Synth 8-6155] done synthesizing module 'MEMWBR' (22#1) [D:/youzq/Pipeline/src/StateRegisters.v:135]
-INFO: [Synth 8-6157] synthesizing module 'WB' [D:/youzq/Pipeline/src/WB.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'WB' (23#1) [D:/youzq/Pipeline/src/WB.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (24#1) [D:/youzq/Pipeline/src/CPU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (20#1) [D:/youzq/Pipeline/Pipeline/src/DataMemory.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (21#1) [D:/youzq/Pipeline/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEMWBR' [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWBR' (22#1) [D:/youzq/Pipeline/Pipeline/src/StateRegisters.v:135]
+INFO: [Synth 8-6157] synthesizing module 'WB' [D:/youzq/Pipeline/Pipeline/src/WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (23#1) [D:/youzq/Pipeline/Pipeline/src/WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (24#1) [D:/youzq/Pipeline/Pipeline/src/CPU.v:1]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
@@ -210,7 +211,7 @@ WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port q
 WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[23]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 479.867 ; gain = 211.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 464.078 ; gain = 190.637
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -223,35 +224,35 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 479.867 ; gain = 211.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 464.078 ; gain = 190.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 479.867 ; gain = 211.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 464.078 ; gain = 190.637
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/youzq/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/youzq/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/youzq/Pipeline/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/youzq/Pipeline/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 840.715 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 836.516 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 840.715 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 840.715 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 836.516 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 836.516 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -259,7 +260,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for MEMs/SortData_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for MEMs/SortData_inst/dist_mem_gen_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Instruction" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "PC0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -300,7 +301,7 @@ INFO: [Synth 8-5546] ROM "RF_data_reg[3]" won't be mapped to RAM because it is t
 INFO: [Synth 8-5546] ROM "RF_data_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RF_data_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "Branch" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/youzq/Pipeline/src/ALU.v:9]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/youzq/Pipeline/Pipeline/src/ALU.v:9]
 INFO: [Synth 8-5546] ROM "RAM_data_reg[511]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RAM_data_reg[510]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RAM_data_reg[509]" won't be mapped to RAM because it is too sparse
@@ -366,8 +367,9 @@ INFO: [Synth 8-5546] ROM "RAM_data_reg[450]" won't be mapped to RAM because it i
 INFO: [Synth 8-5546] ROM "RAM_data_reg[449]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RAM_data_reg[448]" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-327] inferring latch for variable 'Instruction_reg' [D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v:68]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -393,7 +395,7 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 13    
+	   2 Input     32 Bit        Muxes := 12    
 	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 1     
@@ -406,7 +408,8 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 14    
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 556   
+	   2 Input      1 Bit        Muxes := 557   
+	 116 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -433,7 +436,8 @@ Detailed RTL Component Info :
 Module InstructionMemory 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	 116 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module IF 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -544,7 +548,7 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "IF_ID/PC0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -554,8 +558,8 @@ ROM:
 +---------------------+-------------------------------------------------------+---------------+----------------+
 |Module Name          | RTL Object                                            | Depth x Width | Implemented As | 
 +---------------------+-------------------------------------------------------+---------------+----------------+
-|rom                  | rom[255]                                              | 256x10        | LUT            | 
-|dist_mem_gen_v8_0_12 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[255] | 256x10        | LUT            | 
+|rom                  | rom[255]                                              | 256x2         | LUT            | 
+|dist_mem_gen_v8_0_12 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[255] | 256x2         | LUT            | 
 +---------------------+-------------------------------------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -571,13 +575,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 840.715 ; gain = 572.438
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 836.516 ; gain = 563.074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -588,8 +592,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (IFs/instruction_memory1/Instruction_reg[30]) is unused and will be removed from module CPU.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -613,7 +618,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -626,7 +631,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -638,25 +643,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -675,65 +680,69 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    43|
 |3     |LUT1   |     3|
-|4     |LUT2   |    36|
-|5     |LUT3   |   142|
-|6     |LUT4   |  1628|
-|7     |LUT5   |   592|
-|8     |LUT6   |  5171|
-|9     |MUXF7  |  2221|
-|10    |MUXF8  |  1024|
-|11    |FDCE   |   547|
-|12    |FDPE   |     1|
-|13    |FDRE   | 16586|
-|14    |IBUF   |     2|
+|4     |LUT2   |    38|
+|5     |LUT3   |   151|
+|6     |LUT4   |  1589|
+|7     |LUT5   |   587|
+|8     |LUT6   |  5679|
+|9     |MUXF7  |  2466|
+|10    |MUXF8  |  1110|
+|11    |FDCE   |  1179|
+|12    |FDPE   |    13|
+|13    |FDRE   | 16592|
+|14    |LD     |    31|
+|15    |IBUF   |     2|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------------------------------+---------------------------+------+
 |      |Instance                                |Module                     |Cells |
 +------+----------------------------------------+---------------------------+------+
-|1     |top                                     |                           | 27997|
-|2     |  EXs                                   |EX                         |    16|
-|3     |    alu1                                |ALU                        |    16|
-|4     |  EX_MEM                                |EXMEMR                     |   138|
-|5     |  ID_EX                                 |IDEXR                      |  2461|
-|6     |  IDs                                   |ID                         |   544|
-|7     |    register_file1                      |RegisterFile               |   544|
-|8     |  IF_ID                                 |IFIDR                      |   288|
-|9     |  MEM_WB                                |MEMWBR                     |   384|
-|10    |  MEMs                                  |MEM                        | 24062|
-|11    |    SortData_inst                       |SortData                   |    30|
-|12    |      dist_mem_gen_0                    |SortData_dist_mem_gen_0_0  |    30|
-|13    |        U0                              |dist_mem_gen_v8_0_12       |    30|
-|14    |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth |    30|
-|15    |            \gen_rom.rom_inst           |rom                        |    30|
-|16    |    data_memory_inst                    |DataMemory                 | 24000|
-|17    |  WBs                                   |WB                         |    32|
-|18    |  pc                                    |PC                         |    69|
+|1     |top                                     |                           | 29484|
+|2     |  IFs                                   |IF                         |    31|
+|3     |    instruction_memory1                 |InstructionMemory          |    31|
+|4     |  EXs                                   |EX                         |    16|
+|5     |    alu1                                |ALU                        |    16|
+|6     |  EX_MEM                                |EXMEMR                     |   136|
+|7     |  ID_EX                                 |IDEXR                      |  2466|
+|8     |  IDs                                   |ID                         |  1878|
+|9     |    register_file1                      |RegisterFile               |  1878|
+|10    |  IF_ID                                 |IFIDR                      |   343|
+|11    |  MEM_WB                                |MEMWBR                     |   400|
+|12    |  MEMs                                  |MEM                        | 24035|
+|13    |    SortData_inst                       |SortData                   |     3|
+|14    |      dist_mem_gen_0                    |SortData_dist_mem_gen_0_0  |     3|
+|15    |        U0                              |dist_mem_gen_v8_0_12       |     3|
+|16    |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth |     3|
+|17    |            \gen_rom.rom_inst           |rom                        |     3|
+|18    |    data_memory_inst                    |DataMemory                 | 24000|
+|19    |  WBs                                   |WB                         |    32|
+|20    |  pc                                    |PC                         |   144|
 +------+----------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 213 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 957.207 ; gain = 328.082
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
+Synthesis finished with 0 errors, 0 critical warnings and 215 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 965.059 ; gain = 319.180
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 965.059 ; gain = 691.617
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3288 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3650 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'CPU' is not ideal for floorplanning, since the cellview 'DataMemory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 957.207 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 965.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 31 instances were transformed.
+  LD => LDCE: 31 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-164 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+165 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 957.207 ; gain = 695.223
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 957.207 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 965.059 ; gain = 691.617
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 965.059 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/youzq/Pipeline/exp04.runs/synth_1/CPU.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/youzq/Pipeline/Pipeline/exp04.runs/synth_1/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 15:35:57 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 20:59:03 2019...

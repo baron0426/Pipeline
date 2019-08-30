@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug 30 15:08:33 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug 30 20:26:42 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="SortData" PACKAGE="cpg236" SPEEDGRADE="-3"/>
 
@@ -72,7 +72,7 @@
         <PARAMETER NAME="common_output_ce" VALUE="false"/>
         <PARAMETER NAME="dual_port_output_clock_enable" VALUE="false"/>
         <PARAMETER NAME="simple_dual_port_output_clock_enable" VALUE="false"/>
-        <PARAMETER NAME="coefficient_file" VALUE="../../../../../../SortData_dist_mem_gen_0_0.coe"/>
+        <PARAMETER NAME="coefficient_file" VALUE="123.coe"/>
         <PARAMETER NAME="default_data_radix" VALUE="16"/>
         <PARAMETER NAME="default_data" VALUE="0"/>
         <PARAMETER NAME="reset_qspo" VALUE="false"/>

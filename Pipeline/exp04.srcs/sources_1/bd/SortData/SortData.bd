@@ -36,7 +36,7 @@
         "xci_name": "SortData_dist_mem_gen_0_0",
         "parameters": {
           "coefficient_file": {
-            "value": "../../../../../../SortData_dist_mem_gen_0_0.coe"
+            "value": "123.coe"
           },
           "data_width": {
             "value": "32"
