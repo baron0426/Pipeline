@@ -10,12 +10,13 @@ module IFIDR (reset, clk, Instruction, PC, Instruction_next, PC_next);
 	if (reset)
 		begin
 		Instruction <= 32'h00000000;
+		//For retaining PC when stalled.
 		//PC <= 32'h00000000;
 		end
 	else
 		begin
 		Instruction <= Instruction_next;
-		PC <= PC_next;
+		PC <= {((PC_next == 32'h80000000) ? 1'b0 : PC_next[31]) ,PC_next[30:0]};
 		end
 	end
 endmodule

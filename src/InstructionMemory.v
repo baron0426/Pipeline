@@ -14,8 +14,7 @@ module InstructionMemory(Address, Instruction);
 			8'd7:    Instruction <= 32'h1000ffff;
 			8'd8:    Instruction <= 32'h00000000;
 			8'd9:    Instruction <= 32'h20840001;
-			8'd10:    Instruction <= 32'h235a0004;
-			8'd11:    Instruction <= 32'h03400008;
+			8'd10:    Instruction <= 32'h03400008;
 			default: Instruction <= 32'h0;
 		endcase
 		

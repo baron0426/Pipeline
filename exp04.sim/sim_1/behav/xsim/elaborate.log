@@ -5,7 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Interrupt' [D:/youzq/Pipeline/src/CPU.v:88]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Interrupt' [D:/youzq/Pipeline/src/CPU.v:107]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'RegimmFunct' [D:/youzq/Pipeline/src/ID.v:60]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'RegimmFunct' [D:/youzq/Pipeline/src/ID.v:62]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/CPU.v" Line 1. Module CPU doesn't have a timescale but at least one module in design has a timescale.
@@ -19,13 +19,13 @@ WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/ID.v" Line 1. Module ID doesn't h
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/Control.v" Line 2. Module Control doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/ALUControl.v" Line 2. Module ALUControl doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/RegisterFile.v" Line 1. Module RegisterFile doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 23. Module IDEXR doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 24. Module IDEXR doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/EX.v" Line 1. Module EX doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/ALU.v" Line 2. Module ALU doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 105. Module EXMEMR doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 106. Module EXMEMR doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/MEM.v" Line 1. Module MEM doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/DataMemory.v" Line 2. Module DataMemory doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 134. Module MEMWBR doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/StateRegisters.v" Line 135. Module MEMWBR doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/youzq/Pipeline/src/WB.v" Line 1. Module WB doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps

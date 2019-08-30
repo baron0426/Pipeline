@@ -29,6 +29,8 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	assign JumpTarget_temp = (Jump != 2'b00) ? {PC[31:28], Instruction[25:0], 2'b00} : (PC + 32'd4 + ({{14{Instruction[15]}},Instruction[15:0],2'b00}));
 	assign JumpTarget = {PC[31], JumpTarget_temp[30:0]};
 	output Exception;
+	wire Exception_temp;
+	assign Exception = Exception_temp && (PC[31] == 1'b0);
 	
 	/*To IDEX register*/
 	output wire RegWrite;
@@ -61,11 +63,11 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	.PCSrc(Jump), .Branch(BranchType), .RegWrite(RegWrite), .RegDst(RegDst), 
 	.MemRead(MemRead),	.MemWrite(MemWrite), .MemtoReg(MemtoReg),
 	.ALUSrc1(ALUSrc1), .ALUSrc2(ALUSrc2), .ExtOp(ExtOp), .LuOp(LuOp),.ALUOp(ALUOp),
-	.Exception(Exception) ,.Interrupt(Interrupt));
+	.Exception(Exception_temp) ,.Interrupt(Interrupt));
 	
 	ALUControl alu_control_inst(.ALUOp(ALUOp), .Funct(Instruction[5:0]), .ALUCtl(ALUCtl), .Sign(ALU_Sign));
 	assign RegDest = 
-	   (Exception || Interrupt) ? 5'd26 :
+	   (Exception_temp || Interrupt) ? 5'd26 :
 	   (RegDst == 2'b00)? Instruction[20:16]: (RegDst == 2'b01)? Instruction[15:11]: 5'b11111;
 	
 	wire [31:0] Ext_out;
