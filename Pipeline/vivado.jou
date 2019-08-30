@@ -2,44 +2,19 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Aug 30 19:52:21 2019
-# Process ID: 23420
-# Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21468 D:\youzq\Pipeline\Pipeline\exp04.xpr
-# Log file: D:/youzq/Pipeline/Pipeline/vivado.log
-# Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
+# Start of session at: Fri Aug 30 23:52:11 2019
+# Process ID: 10364
+# Current directory: D:/Baron/Pipeline/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5828 D:\Baron\Pipeline\Pipeline\exp04.xpr
+# Log file: D:/Baron/Pipeline/Pipeline/vivado.log
+# Journal file: D:/Baron/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/youzq/Pipeline/Pipeline/exp04.xpr
+open_project D:/Baron/Pipeline/Pipeline/exp04.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
 launch_simulation
-open_wave_config D:/youzq/Pipeline/Pipeline/test_cpu_behav_sum.wcfg
+open_wave_config D:/Baron/Pipeline/Pipeline/test_cpu_behav_sum.wcfg
 source test_cpu.tcl
-run 2000 ns
-run 20000 ns
-run 200000 ns
-run 200000 ns
-open_bd_design {D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/SortData.bd}
-startgroup
-set_property -dict [list CONFIG.coefficient_file {d:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/123.coe}] [get_bd_cells dist_mem_gen_0]
-endgroup
-save_bd_design
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-restart
-run 200000 ns
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-relaunch_sim
-run 200000 ns
 restart
 run 10 ns
 run 10 ns
@@ -63,5 +38,6 @@ run 10 ns
 run 10 ns
 run 10 ns
 run 10 ns
-run 10 ns
+restart
+run 210 ns
 run 10 ns

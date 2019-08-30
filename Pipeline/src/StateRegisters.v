@@ -59,7 +59,7 @@ RegWrite, RegDest, MemRead, MemWrite, MemtoReg, ALUSrc1, ALUSrc2, ALUCtl, ALU_si
 	output reg [4:0] rs;
 	output reg [4:0] rt;
 	output reg [31:0] PC_EX;
-	always @(posedge reset or posedge clk)
+	always @(posedge clk)
 	begin
 	if (reset)
 		begin
