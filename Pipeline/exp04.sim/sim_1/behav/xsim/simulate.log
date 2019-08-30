@@ -151,4 +151,30 @@ WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time         
 Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
 WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1610000 ns: 
 Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
-WARNING in test
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1630000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1650000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1670000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1690000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1710000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1730000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1750000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1770000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1790000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time                70000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               150000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               170000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               190000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
