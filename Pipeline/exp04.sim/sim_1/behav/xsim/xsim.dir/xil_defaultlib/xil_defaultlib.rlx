@@ -14,7 +14,7 @@ D:/Baron/Pipeline/Pipeline/src/EX.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeli
 D:/Baron/Pipeline/Pipeline/src/Forward.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/ID.v,,ForwardingUnit,,,,,,,,
 D:/Baron/Pipeline/Pipeline/src/ID.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/IF.v,,ID,,,,,,,,
 D:/Baron/Pipeline/Pipeline/src/IF.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/InstructionMemory.v,,IF,,,,,,,,
-D:/Baron/Pipeline/Pipeline/src/InstructionMemory.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/MEM.v,,InstructionMemory,,,,,,,,
+D:/Baron/Pipeline/Pipeline/src/InstructionMemory.v,1567184419,verilog,,D:/Baron/Pipeline/Pipeline/src/MEM.v,,InstructionMemory,,,,,,,,
 D:/Baron/Pipeline/Pipeline/src/MEM.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/PC.v,,MEM,,,,,,,,
 D:/Baron/Pipeline/Pipeline/src/PC.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/RegisterFile.v,,PC,,,,,,,,
 D:/Baron/Pipeline/Pipeline/src/RegisterFile.v,1567179073,verilog,,D:/Baron/Pipeline/Pipeline/src/StateRegisters.v,,RegisterFile,,,,,,,,
