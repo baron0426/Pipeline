@@ -1,3 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/exp04.ip_user_files/bd/SortData/ip/SortData_dist_mem_gen_0_0/sim/SortData_dist_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData_dist_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/exp04.ip_user_files/bd/SortData/sim/SortData.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/src/ALU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/src/ALUControl.v" into library xil_defaultlib

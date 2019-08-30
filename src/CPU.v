@@ -125,7 +125,7 @@ module CPU(reset, clk);
 	.MEM_MemtoReg(MEMs_MemtoReg), .MEM_ALUOut(MEMs_ALUOut), .MEM_WrData(MEMs_WrData));
 	
 	MEM MEMs(.clk(clk), .reset(reset), .EX_MemRead(EXs_MemRead), .EX_MemWrite(EXs_MemWrite), .EX_ALUOut(MEMR_ALUOut),
-	.EX_WrData(MEMR_WrData), .WB_MemReadOut(WBR_MemReadOut));
+	.EX_WrData(MEMR_WrData), .WB_MemReadOut(WBR_MemReadOut),.MEM_ALUOut(MEMs_ALUOut));
 	//DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(WBR_MemReadOut), .MemRead(EXs_MemRead), .MemWrite(EXs_MemWrite));
 	
 	MEMWBR MEM_WB(.clk(clk), .MEM_RegWrite(MEMs_RegWrite), .MEM_RegDest(MEMs_RegDest), .MEM_ALUOut(MEMs_ALUOut), 

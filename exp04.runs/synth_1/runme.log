@@ -9,14 +9,17 @@
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source CPU.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 Command: synth_design -top CPU -part xc7a35tcpg236-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16272 
+INFO: Helper process launched with PID 1020 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 340.141 ; gain = 79.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 370.098 ; gain = 101.820
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/youzq/Pipeline/src/CPU.v:1]
 INFO: [Synth 8-6157] synthesizing module 'PC' [D:/youzq/Pipeline/src/PC.v:1]
@@ -58,16 +61,53 @@ INFO: [Synth 8-6155] done synthesizing module 'EX' (13#1) [D:/youzq/Pipeline/src
 INFO: [Synth 8-6157] synthesizing module 'EXMEMR' [D:/youzq/Pipeline/src/StateRegisters.v:106]
 INFO: [Synth 8-6155] done synthesizing module 'EXMEMR' (14#1) [D:/youzq/Pipeline/src/StateRegisters.v:106]
 INFO: [Synth 8-6157] synthesizing module 'MEM' [D:/youzq/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SortData' [D:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
+INFO: [Synth 8-638] synthesizing module 'SortData_dist_mem_gen_0_0' [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_D bound to: 0 - type: integer 
+	Parameter C_HAS_DPO bound to: 0 - type: integer 
+	Parameter C_HAS_DPRA bound to: 0 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 0 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: SortData_dist_mem_gen_0_0.mif - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 1 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'd:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ipshared/d46a/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'SortData_dist_mem_gen_0_0' (18#1) [d:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+INFO: [Synth 8-6155] done synthesizing module 'SortData' (19#1) [D:/youzq/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
 INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/youzq/Pipeline/src/DataMemory.v:2]
 	Parameter RAM_SIZE bound to: 512 - type: integer 
 	Parameter RAM_SIZE_BIT bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (15#1) [D:/youzq/Pipeline/src/DataMemory.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'MEM' (16#1) [D:/youzq/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (20#1) [D:/youzq/Pipeline/src/DataMemory.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (21#1) [D:/youzq/Pipeline/src/MEM.v:1]
 INFO: [Synth 8-6157] synthesizing module 'MEMWBR' [D:/youzq/Pipeline/src/StateRegisters.v:135]
-INFO: [Synth 8-6155] done synthesizing module 'MEMWBR' (17#1) [D:/youzq/Pipeline/src/StateRegisters.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWBR' (22#1) [D:/youzq/Pipeline/src/StateRegisters.v:135]
 INFO: [Synth 8-6157] synthesizing module 'WB' [D:/youzq/Pipeline/src/WB.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'WB' (18#1) [D:/youzq/Pipeline/src/WB.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (19#1) [D:/youzq/Pipeline/src/CPU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (23#1) [D:/youzq/Pipeline/src/WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (24#1) [D:/youzq/Pipeline/src/CPU.v:1]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
@@ -91,47 +131,137 @@ WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[11]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[1]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[0]
-WARNING: [Synth 8-3331] design EXMEMR has unconnected port EX_MemtoReg[1]
-WARNING: [Synth 8-3331] design Control has unconnected port RegimmFunct[2]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[31]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[30]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[29]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[28]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[27]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[26]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[25]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[24]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[23]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[22]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[21]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[20]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[19]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[18]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[17]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[16]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[15]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[14]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[11]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[10]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[1]
-WARNING: [Synth 8-3331] design InstructionMemory has unconnected port Address[0]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[31]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[30]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[29]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[28]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[27]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[26]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[25]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[24]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[23]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[22]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[21]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[20]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[19]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[18]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[17]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[16]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[15]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[14]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[13]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[12]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[11]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[10]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[9]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[8]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[7]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[6]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[5]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[4]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[3]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[2]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[1]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[0]
+WARNING: [Synth 8-3331] design rom has unconnected port clk
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_ce
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_rst
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_srst
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[23]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[22]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[21]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[20]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[19]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[18]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[17]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[16]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[15]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[14]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[13]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[12]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[11]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[10]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[9]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[8]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[7]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[6]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[5]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[4]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[3]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[2]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[1]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[0]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[23]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 433.055 ; gain = 172.500
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 479.867 ; gain = 211.590
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 433.055 ; gain = 172.500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 479.867 ; gain = 211.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 479.867 ; gain = 211.590
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/youzq/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/youzq/Pipeline/exp04.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 840.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 840.715 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 840.715 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 433.055 ; gain = 172.500
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-3
-INFO: [Synth 8-5587] ROM size for "Instruction" is below threshold of ROM address width. It will be mapped to LUTs
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for MEMs/SortData_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for MEMs/SortData_inst/dist_mem_gen_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 840.715 ; gain = 572.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "Instruction" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "PC0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "MemRead" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
@@ -235,10 +365,9 @@ INFO: [Synth 8-5546] ROM "RAM_data_reg[451]" won't be mapped to RAM because it i
 INFO: [Synth 8-5546] ROM "RAM_data_reg[450]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RAM_data_reg[449]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RAM_data_reg[448]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "RAM_data_reg[447]" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 578.371 ; gain = 317.816
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 840.715 ; gain = 572.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +375,6 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -265,7 +393,7 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     32 Bit        Muxes := 13    
 	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 1     
@@ -384,6 +512,10 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 513   
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 512   
+Module MEM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module MEMWBR 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -406,72 +538,25 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "IF_ID/PC0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[28]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[27]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[26]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[25]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[24]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[23]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[22]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[21]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[20]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[19]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[18]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[17]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[16]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[11]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[1]
-WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[0]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[31]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[30]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[29]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[28]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[27]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[26]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[25]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[24]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[23]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[22]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[21]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[20]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[19]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[18]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[17]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[16]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[15]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[14]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[13]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[12]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[11]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[10]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[1]
-WARNING: [Synth 8-3331] design IF has unconnected port PC_in[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 840.715 ; gain = 572.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM:
-+------------+---------------------------------+---------------+----------------+
-|Module Name | RTL Object                      | Depth x Width | Implemented As | 
-+------------+---------------------------------+---------------+----------------+
-|IF          | instruction_memory1/Instruction | 32x32         | LUT            | 
-+------------+---------------------------------+---------------+----------------+
++---------------------+-------------------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                            | Depth x Width | Implemented As | 
++---------------------+-------------------------------------------------------+---------------+----------------+
+|rom                  | rom[255]                                              | 256x10        | LUT            | 
+|dist_mem_gen_v8_0_12 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[255] | 256x10        | LUT            | 
++---------------------+-------------------------------------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -482,12 +567,17 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 840.715 ; gain = 572.438
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 840.715 ; gain = 572.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -499,7 +589,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,7 +613,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -536,7 +626,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -548,25 +638,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -579,37 +669,71 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    43|
+|3     |LUT1   |     3|
+|4     |LUT2   |    36|
+|5     |LUT3   |   142|
+|6     |LUT4   |  1628|
+|7     |LUT5   |   592|
+|8     |LUT6   |  5171|
+|9     |MUXF7  |  2221|
+|10    |MUXF8  |  1024|
+|11    |FDCE   |   547|
+|12    |FDPE   |     1|
+|13    |FDRE   | 16586|
+|14    |IBUF   |     2|
++------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     0|
-+------+---------+-------+------+
++------+----------------------------------------+---------------------------+------+
+|      |Instance                                |Module                     |Cells |
++------+----------------------------------------+---------------------------+------+
+|1     |top                                     |                           | 27997|
+|2     |  EXs                                   |EX                         |    16|
+|3     |    alu1                                |ALU                        |    16|
+|4     |  EX_MEM                                |EXMEMR                     |   138|
+|5     |  ID_EX                                 |IDEXR                      |  2461|
+|6     |  IDs                                   |ID                         |   544|
+|7     |    register_file1                      |RegisterFile               |   544|
+|8     |  IF_ID                                 |IFIDR                      |   288|
+|9     |  MEM_WB                                |MEMWBR                     |   384|
+|10    |  MEMs                                  |MEM                        | 24062|
+|11    |    SortData_inst                       |SortData                   |    30|
+|12    |      dist_mem_gen_0                    |SortData_dist_mem_gen_0_0  |    30|
+|13    |        U0                              |dist_mem_gen_v8_0_12       |    30|
+|14    |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth |    30|
+|15    |            \gen_rom.rom_inst           |rom                        |    30|
+|16    |    data_memory_inst                    |DataMemory                 | 24000|
+|17    |  WBs                                   |WB                         |    32|
+|18    |  pc                                    |PC                         |    69|
++------+----------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 96 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.824 ; gain = 337.270
+Synthesis finished with 0 errors, 0 critical warnings and 213 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 957.207 ; gain = 328.082
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 957.207 ; gain = 688.930
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3288 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'CPU' is not ideal for floorplanning, since the cellview 'DataMemory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 636.516 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 957.207 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-152 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
+164 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 636.516 ; gain = 375.961
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 636.516 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 957.207 ; gain = 695.223
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 957.207 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/youzq/Pipeline/exp04.runs/synth_1/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 13:36:23 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 15:35:57 2019...
