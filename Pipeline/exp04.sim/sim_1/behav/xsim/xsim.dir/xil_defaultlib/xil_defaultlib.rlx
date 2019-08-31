@@ -7,7 +7,7 @@ D:/youzq/Pipeline/Pipeline/exp04.ip_user_files/bd/SortData/sim/SortData.v,156714
 D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/glbl.v,1507081072,verilog,,,,glbl,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/ALU.v,1430680053,verilog,,D:/youzq/Pipeline/Pipeline/src/ALUControl.v,,ALU,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/ALUControl.v,1431089060,verilog,,D:/youzq/Pipeline/Pipeline/src/CPU.v,,ALUControl,,,,,,,,
-D:/youzq/Pipeline/Pipeline/src/CPU.v,1567222272,verilog,,D:/youzq/Pipeline/Pipeline/src/Control.v,,CPU,,,,,,,,
+D:/youzq/Pipeline/Pipeline/src/CPU.v,1567238001,verilog,,D:/youzq/Pipeline/Pipeline/src/Control.v,,CPU,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/Control.v,1567130124,verilog,,D:/youzq/Pipeline/Pipeline/src/DataMemory.v,,Control,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/DataMemory.v,1567142500,verilog,,D:/youzq/Pipeline/Pipeline/src/EX.v,,DataMemory,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/EX.v,1566987289,verilog,,D:/youzq/Pipeline/Pipeline/src/Forward.v,,EX,,,,,,,,

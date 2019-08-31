@@ -32,8 +32,8 @@ merge: move $t1, $a0 #$a0 = left_head, $a1 = right_head
 	move $t2, $a1
 	addi $k1, $k1, 8
 	sw $t1, 4($k1)
-	move $t0, $v0 #$t0 = head, $t1 = p_left, $t2 = p_right
-	move $t1, $v0
+	move $t0, $k1 #$t0 = head, $t1 = p_left, $t2 = p_right
+	move $t1, $k1
 	lw $t3, 0($t1)
 mergeInLoop1:lw $t3, 4($t1) #$t3 = p_left->next
 	beqz $t3, exitMergeInLoop12

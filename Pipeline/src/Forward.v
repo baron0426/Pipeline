@@ -1,6 +1,6 @@
 module ForwardingUnit(stall, BranchSrcA, BranchSrcB, Forward1, Forward2, 
 MEM_RegWrite, WB_RegWrite, MEM_RegDest, WB_RegDest, MEM_MemRead, IDF_rs, IDF_rt, EXF_rs, EXF_rt, 
-ID_Jump, EX_MemRead, EX_RegDest, EX_RegWrite, stall1, stall2);
+ID_Jump, EX_MemRead, EX_RegDest, EX_RegWrite, stall1, stall2, Branch);
 	input MEM_RegWrite;
 	input WB_RegWrite;
 	input MEM_MemRead;
@@ -11,9 +11,10 @@ ID_Jump, EX_MemRead, EX_RegDest, EX_RegWrite, stall1, stall2);
 	input [4:0] EXF_rs;
 	input [4:0] EXF_rt;
 	
-	//in the case of "load-jr,jalr" we need two stalls.
+	//in the case of "load-jr,jalr, branch" we need two stalls.
 	//therefore, we need to check the EX stage parameters.
 	input [1:0] ID_Jump; //to check if the current instruction in ID stage is a jr or jalr instruction.
+	input Branch;
 	input EX_MemRead;
 	input [4:0] EX_RegDest;
 	input EX_RegWrite;
@@ -31,6 +32,6 @@ ID_Jump, EX_MemRead, EX_RegDest, EX_RegWrite, stall1, stall2);
 	assign Forward2   = (MEM_RegWrite) ? (( (MEM_RegDest != 0) && (MEM_RegDest == EXF_rt)) ? 2'b01 : ((WB_RegWrite) ? (( (WB_RegDest != 0) && (WB_RegDest == EXF_rt)) ? 2'b10 : 2'b00) : 2'b00) ) :((WB_RegWrite) ? (( (WB_RegDest != 0) && (WB_RegDest == EXF_rt)) ? 2'b10 : 2'b00) : 2'b00);
 	
 	assign stall1     = (EX_MemRead)  ? ( (((EX_RegDest == IDF_rs) && (EX_RegDest != 0)) || ( (EX_RegDest == IDF_rt) && (EX_RegDest != 0) )) ? 1  : 0) : 0;
-	assign stall2     = (ID_Jump == 2'b10) ? ((EX_MemRead) ? (((EX_RegDest != 0) && (EX_RegDest == IDF_rs)) ? 1 : ((MEM_MemRead) ? (((MEM_RegDest != 0) && (MEM_RegDest == IDF_rs)) ? 1 : 0 ) : 0 ) ) : ((MEM_MemRead) ? (((MEM_RegDest != 0) && (MEM_RegDest == IDF_rs)) ? 1 : 0 ) : 0 ) ) : 0;
+	assign stall2     = (ID_Jump == 2'b10 || Branch) ? ((EX_MemRead) ? (((EX_RegDest != 0) && (EX_RegDest == IDF_rs)) ? 1 : ((MEM_MemRead) ? (((MEM_RegDest != 0) && (MEM_RegDest == IDF_rs)) ? 1 : 0 ) : 0 ) ) : ((MEM_MemRead) ? (((MEM_RegDest != 0) && (MEM_RegDest == IDF_rs)) ? 1 : 0 ) : 0 ) ) : 0;
 	assign stall      = (stall1 | stall2);
 endmodule

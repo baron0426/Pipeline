@@ -1,0 +1,41 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/exp04.ip_user_files/bd/SortData/ip/SortData_dist_mem_gen_0_0/sim/SortData_dist_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData_dist_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/exp04.ip_user_files/bd/SortData/sim/SortData.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/Forward.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/StateRegisters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFIDR
+INFO: [VRFC 10-311] analyzing module IDEXR
+INFO: [VRFC 10-311] analyzing module EXMEMR
+INFO: [VRFC 10-311] analyzing module MEMWBR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/hazardjump.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardJumpUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/Pipeline/Pipeline/src/test_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_cpu

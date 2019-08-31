@@ -92,7 +92,8 @@ module CPU(reset, clk);
 	.Forward1(Forward1), .Forward2(Forward2), .MEM_RegWrite(MEMs_RegWrite), .WB_RegWrite(WBs_RegWrite), 
 	.MEM_RegDest(MEMs_RegDest), .WB_RegDest(WBs_RegDest), .MEM_MemRead(MEMs_MemRead), 
 	.IDF_rs(IDs_rs), .IDF_rt(IDs_rt), .EXF_rs(EXs_rs), .EXF_rt(EXs_rt), .ID_Jump(IDs_Jump), 
-	.EX_MemRead(EXs_MemRead), .EX_RegDest(EXs_RegDest), .EX_RegWrite(EXs_RegWrite), .stall1(stall1), .stall2(stall2));
+	.EX_MemRead(EXs_MemRead), .EX_RegDest(EXs_RegDest), .EX_RegWrite(EXs_RegWrite), .stall1(stall1), .stall2(stall2),
+	 .Branch(Branch));
 
 
 	IF IFs(.PC_in(PC), .IFIDFlush(IFIDFlush), .Instruction(IFs_Instruction));
