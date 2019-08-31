@@ -1,7 +1,22 @@
-module CPU(reset, clk);
+module CPU(reset, clk, leds, digit, digit_en);
 	input reset, clk;
+	output [7:0] leds;
+	output [7:0] digit;
+	output [3:0] digit_en;
 	wire [31:0] PC;
 	wire [31:0] PC_next;
+	reg [31:0] Systick;
+	always @(posedge clk)
+	begin
+	   if(reset || Systick == 32'hffffffff)
+	   begin
+	   Systick <= 32'd0;
+	   end
+	   else
+	   begin
+	   Systick <= Systick + 32'd1;
+	   end
+	end
 	
 	wire stall;
 	wire stall1;
@@ -126,7 +141,8 @@ module CPU(reset, clk);
 	.MEM_MemtoReg(MEMs_MemtoReg), .MEM_ALUOut(MEMs_ALUOut), .MEM_WrData(MEMs_WrData));
 	
 	MEM MEMs(.clk(clk), .reset(reset), .EX_MemRead(EXs_MemRead), .EX_MemWrite(EXs_MemWrite), .EX_ALUOut(MEMR_ALUOut),
-	.EX_WrData(MEMR_WrData), .WB_MemReadOut(WBR_MemReadOut),.MEM_ALUOut(MEMs_ALUOut));
+	.EX_WrData(MEMR_WrData), .WB_MemReadOut(WBR_MemReadOut),.MEM_ALUOut(MEMs_ALUOut),
+	.leds(leds), .digit(digit) ,.digit_en(digit_en) ,.Systick(Systick));
 	//DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(WBR_MemReadOut), .MemRead(EXs_MemRead), .MemWrite(EXs_MemWrite));
 	
 	MEMWBR MEM_WB(.clk(clk), .MEM_RegWrite(MEMs_RegWrite), .MEM_RegDest(MEMs_RegDest), .MEM_ALUOut(MEMs_ALUOut), 

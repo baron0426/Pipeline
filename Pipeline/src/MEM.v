@@ -1,7 +1,11 @@
-module MEM(clk, reset, EX_MemRead, EX_MemWrite, EX_ALUOut, EX_WrData, WB_MemReadOut, MEM_ALUOut);
+module MEM(clk, reset, EX_MemRead, EX_MemWrite, EX_ALUOut, EX_WrData, WB_MemReadOut, MEM_ALUOut,
+leds, digit, digit_en, Systick);
 	input clk;
 	input reset;
-	
+	input [31:0] Systick;
+	output reg [7:0] leds;
+	output reg [7:0] digit;
+	output reg [3:0] digit_en;
 	/*From EX_MEM Register*/
 	//input EX_RegWrite;
 	//input [4:0] EX_RegDest;
@@ -24,6 +28,9 @@ module MEM(clk, reset, EX_MemRead, EX_MemWrite, EX_ALUOut, EX_WrData, WB_MemRead
 	//output wire WB_MemtoReg;
 	assign WB_MemReadOut = 
 	   (MEM_ALUOut[31:28] == 4'h3) ? ROMMemReadOut :
+	   (MEM_ALUOut == 32'h4000000C) ? {24'b0, leds} :
+	   (MEM_ALUOut == 32'h40000010) ? {20'b0, digit_en, digit} :
+	   (MEM_ALUOut == 32'h40000014) ? Systick :
 	   RAMMemReadOut;
 	   
 	SortData SortData_inst(.Address(MEM_ALUOut[9:2]),.MemOut(ROMMemReadOut));

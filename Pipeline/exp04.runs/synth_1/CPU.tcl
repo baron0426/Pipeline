@@ -30,7 +30,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/youzq/Pipeline/Pipeline/exp04.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files D:/youzq/Pipeline/Pipeline/SortData_dist_mem_gen_0_0.coe
-add_files D:/youzq/Pipeline/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/123.coe
+add_files d:/youzq/Pipeline/Pipeline/ain.coe
 read_verilog -library xil_defaultlib {
   D:/youzq/Pipeline/Pipeline/src/ALU.v
   D:/youzq/Pipeline/Pipeline/src/ALUControl.v
