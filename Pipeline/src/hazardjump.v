@@ -18,6 +18,6 @@ IFIDFlush, IDEXFlush, PC_next);
 	   (Interrupt) ? 32'h80000004 : 
 	   (Exception) ? 32'h80000008 : 
 	   (stall) ? (PC) : ((Jump==2'b10) ? (branchCmpA) : ((Jump== 2'b01) ? (JumpTarget) : ((Branch && BranchCond) ? JumpTarget : {(PC[31]), PC_plus_4[30:0]} )));
-	assign IFIDFlush = (Jump ||(Branch && BranchCond) || Interrupt || Exception) ? 1 : 0;
+	assign IFIDFlush = (stall) ? 0 : ((Jump ||(Branch && BranchCond) || Interrupt || Exception) ? 1 : 0);
 	assign IDEXFlush = (stall) ? 1 : 0;
 endmodule

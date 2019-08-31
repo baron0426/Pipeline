@@ -22,9 +22,10 @@ int readInt(int &a, FILE* file){
 }
 int main(int argc, char *argv[]){
 	input  = fopen(inputName, "wb") ;
-	writeInt(10, input) ;
 	n = 10;
-	int A[10];
+	cin >> n;
+	writeInt(n, input) ;
+	int A[100];
 	for(int i = 0; i<n; i++){
         cin >> A[i];
 	}

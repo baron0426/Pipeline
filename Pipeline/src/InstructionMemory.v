@@ -20,7 +20,7 @@ module InstructionMemory(Address, Instruction);
 			default: Instruction <= 32'h0;
 		endcase*/
 		//for fluidity test
-		
+		/*
 		case (Address[9:2])
 			8'd0:    Instruction <= 32'h08000003;
 			8'd1:    Instruction <= 32'h08000015;
@@ -47,7 +47,7 @@ module InstructionMemory(Address, Instruction);
 			8'd22:   Instruction <= 32'h1000ffff;
 			default: Instruction <= 32'h0;
 		endcase
-		
+		*/
 		// for save-load test
 		/*case (Address[9:2])
 			8'd0:    Instruction <= 32'h08000003;
@@ -64,7 +64,7 @@ module InstructionMemory(Address, Instruction);
 			8'd11:    Instruction <= 32'h1000ffff;
 			default: Instruction <= 32'h0;
 		endcase*/
-		/*case (Address[9:2])
+		case (Address[9:2])
             8'd0:Instruction <= 32'h08000003;
             8'd1:Instruction <= 32'h08000071;
             8'd2:Instruction <= 32'h08000072;
@@ -180,6 +180,6 @@ module InstructionMemory(Address, Instruction);
             8'd112:Instruction <= 32'h1000ffff;
             8'd113:Instruction <= 32'h1000ffff;
             8'd114:Instruction <= 32'h1000ffff;
-		endcase*/
+		endcase
 	end	
 endmodule
