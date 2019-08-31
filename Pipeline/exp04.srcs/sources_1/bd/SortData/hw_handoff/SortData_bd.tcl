@@ -163,7 +163,7 @@ proc create_root_design { parentCell } {
   # Create instance: dist_mem_gen_0, and set properties
   set dist_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dist_mem_gen:8.0 dist_mem_gen_0 ]
   set_property -dict [ list \
-   CONFIG.coefficient_file {123.coe} \
+   CONFIG.coefficient_file {../../../../../../ain.coe} \
    CONFIG.data_width {32} \
    CONFIG.default_data_radix {16} \
    CONFIG.depth {256} \

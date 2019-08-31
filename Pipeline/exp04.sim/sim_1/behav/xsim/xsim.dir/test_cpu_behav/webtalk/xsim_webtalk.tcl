@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sat Aug 31 16:49:45 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sat Aug 31 17:08:59 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "1ab757be-0780-472f-a6ba-2b45ea6cb2b8" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "b99b8c95232349d6a87c827e32857e37" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "169" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "171" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz" -context "user_environment"
@@ -36,7 +36,7 @@ webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "169" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "24" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "1.00_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "69224_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3097909775 -regid "" -xml D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "1.09_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "69696_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 92414300 -regid "" -xml D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/youzq/Pipeline/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
