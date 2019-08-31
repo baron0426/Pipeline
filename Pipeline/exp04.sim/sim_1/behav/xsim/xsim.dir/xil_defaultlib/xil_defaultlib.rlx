@@ -20,5 +20,5 @@ D:/youzq/Pipeline/Pipeline/src/PC.v,1567082433,verilog,,D:/youzq/Pipeline/Pipeli
 D:/youzq/Pipeline/Pipeline/src/RegisterFile.v,1567169865,verilog,,D:/youzq/Pipeline/Pipeline/src/StateRegisters.v,,RegisterFile,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/StateRegisters.v,1567222272,verilog,,D:/youzq/Pipeline/Pipeline/src/WB.v,,EXMEMR;IDEXR;IFIDR;MEMWBR,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/WB.v,1566987659,verilog,,D:/youzq/Pipeline/Pipeline/src/hazardjump.v,,WB,,,,,,,,
-D:/youzq/Pipeline/Pipeline/src/hazardjump.v,1567235766,verilog,,D:/youzq/Pipeline/Pipeline/src/test_cpu.v,,HazardJumpUnit,,,,,,,,
+D:/youzq/Pipeline/Pipeline/src/hazardjump.v,1567238011,verilog,,D:/youzq/Pipeline/Pipeline/src/test_cpu.v,,HazardJumpUnit,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/test_cpu.v,1567005338,verilog,,,,test_cpu,,,,,,,,

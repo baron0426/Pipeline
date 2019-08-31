@@ -7,31 +7,4 @@ WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 fo
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Interrupt' [D:/youzq/Pipeline/Pipeline/src/CPU.v:108]
 WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'RegimmFunct' [D:/youzq/Pipeline/Pipeline/src/ID.v:62]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.PC
-Compiling module xil_defaultlib.HazardJumpUnit
-Compiling module xil_defaultlib.ForwardingUnit
-Compiling module xil_defaultlib.InstructionMemory
-Compiling module xil_defaultlib.IF
-Compiling module xil_defaultlib.IFIDR
-Compiling module xil_defaultlib.Control
-Compiling module xil_defaultlib.ALUControl
-Compiling module xil_defaultlib.RegisterFile
-Compiling module xil_defaultlib.ID
-Compiling module xil_defaultlib.IDEXR
-Compiling module xil_defaultlib.ALU
-Compiling module xil_defaultlib.EX
-Compiling module xil_defaultlib.EXMEMR
-Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
-Compiling module xil_defaultlib.SortData_dist_mem_gen_0_0
-Compiling module xil_defaultlib.SortData
-Compiling module xil_defaultlib.DataMemory
-Compiling module xil_defaultlib.MEM
-Compiling module xil_defaultlib.MEMWBR
-Compiling module xil_defaultlib.WB
-Compiling module xil_defaultlib.CPU
-Compiling module xil_defaultlib.test_cpu
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot test_cpu_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
