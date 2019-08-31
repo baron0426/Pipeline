@@ -1,0 +1,4 @@
+start output on 18865th cycle
+total 19461-5=19456 cycles
+Instruction counter gives 15192 insts.
+CPI = 19456/15192 = 1.28
