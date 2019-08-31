@@ -11,7 +11,7 @@ D:/youzq/Pipeline/Pipeline/src/CPU.v,1567238001,verilog,,D:/youzq/Pipeline/Pipel
 D:/youzq/Pipeline/Pipeline/src/Control.v,1567130124,verilog,,D:/youzq/Pipeline/Pipeline/src/DataMemory.v,,Control,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/DataMemory.v,1567142500,verilog,,D:/youzq/Pipeline/Pipeline/src/EX.v,,DataMemory,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/EX.v,1566987289,verilog,,D:/youzq/Pipeline/Pipeline/src/Forward.v,,EX,,,,,,,,
-D:/youzq/Pipeline/Pipeline/src/Forward.v,1565357557,verilog,,D:/youzq/Pipeline/Pipeline/src/ID.v,,ForwardingUnit,,,,,,,,
+D:/youzq/Pipeline/Pipeline/src/Forward.v,1567238881,verilog,,D:/youzq/Pipeline/Pipeline/src/ID.v,,ForwardingUnit,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/ID.v,1567134729,verilog,,D:/youzq/Pipeline/Pipeline/src/IF.v,,ID,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/IF.v,1566887853,verilog,,D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v,,IF,,,,,,,,
 D:/youzq/Pipeline/Pipeline/src/InstructionMemory.v,1567233665,verilog,,D:/youzq/Pipeline/Pipeline/src/MEM.v,,InstructionMemory,,,,,,,,
