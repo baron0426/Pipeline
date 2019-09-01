@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Sep  1 12:43:00 2019
+| Date         : Sun Sep  1 12:47:02 2019
 | Host         : DESKTOP-HIS8ABG running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
 | Design       : CPU
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 13    |          Yes |           - |          Set |
 | 1011  |          Yes |           - |        Reset |
-| 8     |          Yes |         Set |            - |
-| 16889 |          Yes |       Reset |            - |
+| 40    |          Yes |         Set |            - |
+| 16857 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,7 +149,7 @@ Table of Contents
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 16889 |        Flop & Latch |
+| FDRE     | 16857 |        Flop & Latch |
 | LUT6     |  6013 |                 LUT |
 | MUXF7    |  2454 |               MuxFx |
 | MUXF8    |  1116 |               MuxFx |
@@ -159,9 +159,9 @@ Table of Contents
 | LUT3     |   218 |                 LUT |
 | LUT2     |   129 |                 LUT |
 | CARRY4   |    59 |          CarryLogic |
+| FDSE     |    40 |        Flop & Latch |
 | OBUF     |    20 |                  IO |
 | FDPE     |    13 |        Flop & Latch |
-| FDSE     |     8 |        Flop & Latch |
 | LUT1     |     5 |                 LUT |
 | IBUF     |     2 |                  IO |
 | BUFG     |     1 |               Clock |

@@ -48,7 +48,7 @@ leds, digit, digit_en, Systick, Interrupt);
 	  if(reset)
 	  begin
 	     TH <= 32'h0;
-	     TL <= 32'h0;
+	     TL <= 32'hffffffff;
 	     TCON <= 3'b000;
 	     leds <= 8'b00000000;
 	     digit <= 8'b11111111;
