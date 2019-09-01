@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="201749550000fs"></ZoomStartTime>
-      <ZoomEndTime time="201813150001fs"></ZoomEndTime>
-      <Cursor1Time time="201800000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="28800000001fs"></ZoomEndTime>
+      <Cursor1Time time="94930000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="307"></NameColumnWidth>
-      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+      <NameColumnWidth column_width="104"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="75" />
+   <WVObjectSize size="76" />
    <wvobject fp_name="/test_cpu/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -51,6 +51,7 @@
    <wvobject fp_name="/test_cpu/cpu1/IDs/register_file1/RF_data" type="array">
       <obj_property name="ElementShortName">RF_data[31:1][31:0]</obj_property>
       <obj_property name="ObjectShortName">RF_data[31:1][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/forward/stall" type="logic">
       <obj_property name="ElementShortName">stall</obj_property>
@@ -319,5 +320,9 @@
    <wvobject fp_name="/test_cpu/cpu1/MEMs/SortData_inst/dist_mem_gen_0_spo" type="array">
       <obj_property name="ElementShortName">dist_mem_gen_0_spo[31:0]</obj_property>
       <obj_property name="ObjectShortName">dist_mem_gen_0_spo[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/Systick" type="array">
+      <obj_property name="ElementShortName">Systick[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Systick[31:0]</obj_property>
    </wvobject>
 </wave_config>

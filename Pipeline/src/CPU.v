@@ -100,7 +100,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	PC pc(.reset(reset), .clk(clk), .PC_next(PC_next), .PC(PC));
 	
 	HazardJumpUnit hazard_jump(.PC(PC), .stall(stall), .Jump(IDs_Jump), .Branch(Branch), .BranchCond(BranchCond), 
-	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(0), .Exception(Exception),
+	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(Interruption), .Exception(Exception),
 	.IFIDFlush(IFIDFlush), .IDEXFlush(IDEXFlush), .PC_next(PC_next));
 	
 	ForwardingUnit forward(.stall(stall), .BranchSrcA(BranchSrcA), .BranchSrcB(BranchSrcB),
@@ -133,7 +133,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	.ID_ALU_Sign(EXs_ALU_sign), .ID_shamt(EXs_shamt), .ID_DataBusA(EXs_DataBusA), .ID_DataBusB(EXs_DataBusB), 
 	.ID_Imm(EXs_Imm), .MEMForwardSrc(MEMs_ALUOut), .WBForwardSrc(WB_ID_WriteBackData), 
 	.Forward1(Forward1), .Forward2(Forward2), .MEM_ALUOut(MEMR_ALUOut), .MEM_WrData(MEMR_WrData),
-	.PC_EX(EXs_PC));
+	.PC_EX(EXs_PC),.Interrupt(Interruption));
 	
 	EXMEMR EX_MEM(.clk(clk), .EX_RegWrite(EXs_RegWrite), .EX_RegDest(EXs_RegDest), .EX_MemRead(EXs_MemRead), 
 	.EX_MemWrite(EXs_MemWrite), .EX_MemtoReg(EXs_MemtoReg), .EX_ALUOut(MEMR_ALUOut), .EX_WrData(MEMR_WrData), 
@@ -142,7 +142,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	
 	MEM MEMs(.clk(clk), .reset(reset), .EX_MemRead(MEMs_MemRead), .EX_MemWrite(MEMs_MemWrite), .EX_ALUOut(MEMs_ALUOut),
 	.EX_WrData(MEMs_WrData), .WB_MemReadOut(WBR_MemReadOut),.RAMMemReadOut(RAMMemReadOut),
-	.leds(leds), .digit(digit) ,.digit_en(digit_en) ,.Systick(Systick));
+	.leds(leds), .digit(digit) ,.digit_en(digit_en) ,.Systick(Systick) ,.Interrupt(Interruption));
 	
 	wire EXs_MemRead_toRAM;
 	wire EXs_MemWrite_toRAM;

@@ -5,7 +5,7 @@ module Control(OpCode, Funct, RegimmFunct,
 	ALUSrc1, ALUSrc2, ExtOp, LuOp, ALUOp, Exception, Interrupt);
 	input [5:0] OpCode;
 	input [5:0] Funct;
-	input [2:0] RegimmFunct;
+	input [1:0] RegimmFunct;
 	input Interrupt;
 	output [1:0] PCSrc;
 	output [2:0] Branch;
