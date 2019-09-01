@@ -13,6 +13,7 @@ addi $s0, $zero, 0xfffffff0  #CHANGE WHEN IMPLEMENT WITH HARDWARE
 addi $s1, $zero, 0x40000000 #$s1 save the base address of the timer
 sw $s0, 0($s1) 
 addi $s0, $zero, 0x0003 #$s0 save the TCON variable of the timer
+addi $s3, $zero, 0x0fff #$s3 = {digit_en, digit}
 sw $s0, 8($s1)
 Loop:    beq $zero, $zero, Loop  #construct an infinite loop for the program to stuck in after all the codes above are executed.
 Loop2:    beq $zero, $zero, Loop2
@@ -35,14 +36,14 @@ Interrupt:
 andi $s0, $s0, 0x0000
 sw $s0, 8($s1)
 bgt $s2, 11,  changeResult #CHANGE WHEN IMPLEMENT WITH HARDWARE
-ProcStart:addi $s3, $s3, 0 #$s3 = {digit_en, digit}
+ProcStart:
 andi $t1, $s3, 0x00000f00
 ori $s3, $s3, 0x0f00
 beq $t1, 0x0e00, Digit1110
 beq $t1, 0x0d00, Digit1101
 beq $t1, 0x0b00, Digit1011
 beq $t1, 0x0700, Digit0111
-j DigitProcEnd
+j Digit0111
 Digit1110:andi $s3, $s3, 0x0dff
 srl  $a0, $gp, 4
 j DigitProcEnd
