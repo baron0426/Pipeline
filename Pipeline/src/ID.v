@@ -23,7 +23,7 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	/*To Hazard and Jump Unit*/
 	output wire [1:0]Jump;
 	output wire Branch;
-	output wire BranchCond;
+	output reg BranchCond;
 	output wire [31:0] JumpTarget;
 	wire [31:0] JumpTarget_temp;
 	assign JumpTarget_temp = (Jump != 2'b00) ? {PC[31:28], Instruction[25:0], 2'b00} : (PC + 32'd4 + ({{14{Instruction[15]}},Instruction[15:0],2'b00}));
@@ -98,13 +98,17 @@ shamt, Imm, rs, rt, branchCmpA, branchCmpB, JumpTarget, Jump, EXForwardSrc, PC, 
 	assign BranchCond_blez = ~BranchCond_bgtz;
 	assign BranchCond_bne = ~BranchCond_beq;
 	
-	assign BranchCond = 
-		(BranchType == 3'b001) ? BranchCond_beq :
-		(BranchType == 3'b010) ? BranchCond_bne :
-		(BranchType == 3'b011) ? BranchCond_blez :
-		(BranchType == 3'b100) ? BranchCond_bgtz :
-		(BranchType == 3'b101) ? BranchCond_bltz :
-		(BranchType == 3'b110) ? BranchCond_bgez : 1'b0;
-	
+	always@(*)
+	begin
+	   case(BranchType)
+	   3'b001:BranchCond<=BranchCond_beq;
+	   3'b010:BranchCond<=BranchCond_bne;
+	   3'b011:BranchCond<=BranchCond_blez;
+	   3'b100:BranchCond<=BranchCond_bgtz;
+	   3'b101:BranchCond<=BranchCond_bltz;
+	   3'b110:BranchCond<=BranchCond_bgez;
+	   default:BranchCond<=0;
+	   endcase
+	end
 		
 endmodule

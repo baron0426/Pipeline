@@ -31,15 +31,20 @@ leds, digit, digit_en, Systick, Interrupt);
 	wire [31:0] RAMMemReadOut;
 	wire [31:0] ROMMemReadOut;
 	//output wire WB_MemtoReg;
-	assign WB_MemReadOut = 
-	   (EX_ALUOut[31:28] == 4'h3) ? ROMMemReadOut :
-	   (EX_ALUOut == 32'h40000000) ? TH :
-	   (EX_ALUOut == 32'h40000004) ? TL :
-	   (EX_ALUOut == 32'h40000008) ? {29'b0, TCON} :
-	   (EX_ALUOut == 32'h4000000C) ? {24'b0, leds} :
-	   (EX_ALUOut == 32'h40000010) ? {20'b0, digit_en, digit} :
-	   (EX_ALUOut == 32'h40000014) ? Systick :
-	   RAMMemReadOut;
+	reg [31:0]WB_MemReadOut_temp;
+	always@(*)
+	begin
+	   case(EX_ALUOut)
+	   32'h40000000:WB_MemReadOut_temp<=TH;
+	   32'h40000004:WB_MemReadOut_temp<=TL;
+	   32'h40000008:WB_MemReadOut_temp<={29'b0, TCON};
+	   32'h4000000C:WB_MemReadOut_temp<={24'b0, leds};
+	   32'h40000010:WB_MemReadOut_temp<={20'b0, digit_en, digit};
+	   32'h40000014:WB_MemReadOut_temp<=Systick;
+	   default:WB_MemReadOut_temp<=RAMMemReadOut;
+	   endcase
+	end
+	assign WB_MemReadOut = (EX_ALUOut[31:28] == 4'h3) ? ROMMemReadOut :WB_MemReadOut_temp;
 	   
 	SortData SortData_inst(.Address(EX_ALUOut[9:2]),.MemOut(ROMMemReadOut));
 	

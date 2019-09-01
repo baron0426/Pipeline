@@ -153,7 +153,7 @@ module CPU(reset, clk, leds, digit_out, digit_en);
 	assign EXs_MemRead_toRAM = EXs_MemRead && (MEMR_ALUOut[31:16] == 16'h0000);
 	assign EXs_MemWrite_toRAM = EXs_MemWrite && (MEMR_ALUOut[31:16] == 16'h0000);
 	
-	DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(RAMMemReadOut), .MemRead(EXs_MemRead_toRAM), .MemWrite(EXs_MemWrite_toRAM));
+	DataMemory data_memory_inst( .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(RAMMemReadOut), .MemRead(EXs_MemRead_toRAM), .MemWrite(EXs_MemWrite_toRAM));
 	
 	MEMWBR MEM_WB(.clk(clk), .MEM_RegWrite(MEMs_RegWrite), .MEM_RegDest(MEMs_RegDest), .MEM_ALUOut(MEMs_ALUOut), 
 	.MEM_MemReadOut(WBR_MemReadOut), .MEM_MemtoReg(MEMs_MemtoReg), 
