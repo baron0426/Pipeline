@@ -128,8 +128,7 @@ Loop: beq $zero, $zero, Loop
 Interrupt:andi $s0, $s0, 0x0000
 sw $s0, 8($s1)
 bgt $s2, 2000,  changeResult #CHANGE WHEN IMPLEMENT WITH HARDWARE
-ProcStart:
-andi $t1, $s3, 0x00000f00
+ProcStart: andi $t1, $s3, 0x00000f00
 ori $s3, $s3, 0x0f00
 beq $t1, 0x0e00, Digit1110
 beq $t1, 0x0d00, Digit1101
@@ -204,6 +203,8 @@ addi $s2, $s2, 1
 ori $s0, $s0, 0x0003
 sw $s0, 8($s1)
 jr $k0
-changeResult:lw $gp, 0($t8)
+changeResult:add $s2, $zero, $zero
+	lw $gp, 0($t8)
 	lw $t8, 4($t8)
+	j ProcStart
 Exception: beq $zero, $zero, Exception 

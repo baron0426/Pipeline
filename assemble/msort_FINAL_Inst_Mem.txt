@@ -1,6 +1,6 @@
 8'd0:Instruction <= 32'h08000003;
 8'd1:Instruction <= 32'h08000083;
-8'd2:Instruction <= 32'h080000e9;
+8'd2:Instruction <= 32'h080000eb;
 8'd3:Instruction <= 32'h3c014000;
 8'd4:Instruction <= 32'h34210014;
 8'd5:Instruction <= 32'h00014020;
@@ -229,7 +229,9 @@
 8'd228:Instruction <= 32'h36100003;
 8'd229:Instruction <= 32'hae300008;
 8'd230:Instruction <= 32'h03400008;
-8'd231:Instruction <= 32'h8f1c0000;
-8'd232:Instruction <= 32'h8f180004;
-8'd233:Instruction <= 32'h1000ffff;
+8'd231:Instruction <= 32'h00009020;
+8'd232:Instruction <= 32'h8f1c0000;
+8'd233:Instruction <= 32'h8f180004;
+8'd234:Instruction <= 32'h08000088;
+8'd235:Instruction <= 32'h1000ffff;
 default: Instruction<=32'h0;
