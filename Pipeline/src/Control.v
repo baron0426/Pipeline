@@ -48,7 +48,7 @@ module Control(OpCode, Funct, RegimmFunct,
 		(OpCode == 6'h02 || OpCode == 6'h04 || OpCode == 6'h2b) ? 2'bX :
 		(OpCode == 6'h05 || OpCode == 6'h06 || OpCode == 6'h07) ? 2'bX :
 		(OpCode == 6'h03 || OpCode == 6'h01) ? 2'b10 :
-		(OpCode == 6'h0a || OpCode == 6'h0b || OpCode == 6'h0c || OpCode == 6'h08 || OpCode == 6'h09 || OpCode == 6'h23 || OpCode == 6'h0f) ? 2'b00 :
+		(OpCode == 6'h0a || OpCode == 6'h0b || OpCode == 6'h0c || OpCode == 6'h08 || OpCode == 6'h09 || OpCode == 6'h23 || OpCode == 6'h0f ||OpCode == 6'h0d) ? 2'b00 :
 		2'b01;
 	assign MemRead =
 		(OpCode == 6'h23) ? 1 : 0;
@@ -70,12 +70,12 @@ module Control(OpCode, Funct, RegimmFunct,
 		(OpCode == 6'h02 || OpCode == 6'h03) ? 1'bX :
 		1'b0;
 	assign ALUSrc2 = 
-		(OpCode == 6'h23 || OpCode == 6'h2b || OpCode == 6'h0f || OpCode == 6'h08 || OpCode == 6'h09 || OpCode == 6'h0c || OpCode == 6'h0a || OpCode == 6'h0b) ? 1'b1 :
+		(OpCode == 6'h23 || OpCode == 6'h2b || OpCode == 6'h0f || OpCode == 6'h08 || OpCode == 6'h09 || OpCode == 6'h0c || OpCode == 6'h0a || OpCode == 6'h0b || OpCode == 6'h0d) ? 1'b1 :
 		(OpCode == 6'h00 && (Funct == 6'h08 || Funct==6'h09)) ? 1'bX :
 		(OpCode == 6'h02 || OpCode == 6'h03) ? 1'bX :
 		1'b0;
 	assign ExtOp = 
-		(OpCode == 6'h0c) ? 1'b0 :
+		(OpCode == 6'h0c || OpCode == 6'h0d) ? 1'b0 :
 		(OpCode == 6'h00) ? 1'bX :
 		(OpCode == 6'h02 || OpCode == 6'h03) ? 1'bx :
 		(OpCode == 6'h0f) ? 1'bX :
@@ -88,7 +88,7 @@ module Control(OpCode, Funct, RegimmFunct,
 		
 	assign Exception = 
 	     (OpCode == 6'h23 || OpCode == 6'h2b || OpCode == 6'h0f) ? 1'b0 : 
-	     (OpCode >= 6'h00 && OpCode <= 6'h0c) ? 1'b0 :
+	     (OpCode >= 6'h00 && OpCode <= 6'h0d) ? 1'b0 :
 	     1'b1;
 	
 	// Your code above
@@ -97,6 +97,7 @@ module Control(OpCode, Funct, RegimmFunct,
 		(OpCode == 6'h00)? 3'b010: 
 		(OpCode == 6'h04)? 3'b001: 
 		(OpCode == 6'h0c)? 3'b100: 
+		(OpCode == 6'h0d)? 3'b110: 
 		(OpCode == 6'h0a || OpCode == 6'h0b)? 3'b101: 
 		3'b000;
 		
