@@ -180,6 +180,7 @@ module InstructionMemory(Address, Instruction);
             8'd112:Instruction <= 32'h1000ffff;
             8'd113:Instruction <= 32'h1000ffff;
             8'd114:Instruction <= 32'h1000ffff;
+            default: Instruction <= 32'h00000000;
 		endcase
 	end	
 endmodule

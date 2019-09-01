@@ -73,7 +73,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	
 	wire [31:0] MEMR_ALUOut;
 	wire [31:0] MEMR_WrData;
-	
+	wire [31:0] RAMMemReadOut;
 	wire MEMs_RegWrite;
 	wire [4:0] MEMs_RegDest;
 	wire MEMs_MemRead;
@@ -140,10 +140,16 @@ module CPU(reset, clk, leds, digit, digit_en);
 	.MEM_RegWrite(MEMs_RegWrite), .MEM_RegDest(MEMs_RegDest), .MEM_MemRead(MEMs_MemRead), .MEM_MemWrite(MEMs_MemWrite), 
 	.MEM_MemtoReg(MEMs_MemtoReg), .MEM_ALUOut(MEMs_ALUOut), .MEM_WrData(MEMs_WrData));
 	
-	MEM MEMs(.clk(clk), .reset(reset), .EX_MemRead(EXs_MemRead), .EX_MemWrite(EXs_MemWrite), .EX_ALUOut(MEMR_ALUOut),
-	.EX_WrData(MEMR_WrData), .WB_MemReadOut(WBR_MemReadOut),.MEM_ALUOut(MEMs_ALUOut),
+	MEM MEMs(.clk(clk), .reset(reset), .EX_MemRead(MEMs_MemRead), .EX_MemWrite(MEMs_MemWrite), .EX_ALUOut(MEMs_ALUOut),
+	.EX_WrData(MEMs_WrData), .WB_MemReadOut(WBR_MemReadOut),.RAMMemReadOut(RAMMemReadOut),
 	.leds(leds), .digit(digit) ,.digit_en(digit_en) ,.Systick(Systick));
-	//DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(WBR_MemReadOut), .MemRead(EXs_MemRead), .MemWrite(EXs_MemWrite));
+	
+	wire EXs_MemRead_toRAM;
+	wire EXs_MemWrite_toRAM;
+	assign EXs_MemRead_toRAM = EXs_MemRead && (MEMR_ALUOut[31:16] == 16'h0000);
+	assign EXs_MemWrite_toRAM = EXs_MemWrite && (MEMR_ALUOut[31:16] == 16'h0000);
+	
+	DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(MEMR_ALUOut), .Write_data(MEMR_WrData), .Read_data(RAMMemReadOut), .MemRead(EXs_MemRead_toRAM), .MemWrite(EXs_MemWrite_toRAM));
 	
 	MEMWBR MEM_WB(.clk(clk), .MEM_RegWrite(MEMs_RegWrite), .MEM_RegDest(MEMs_RegDest), .MEM_ALUOut(MEMs_ALUOut), 
 	.MEM_MemReadOut(WBR_MemReadOut), .MEM_MemtoReg(MEMs_MemtoReg), 
