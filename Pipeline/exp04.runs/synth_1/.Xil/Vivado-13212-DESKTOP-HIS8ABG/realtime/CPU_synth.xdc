@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:D:/youzq/Pipeline/Pipeline/exp04.runs/synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:1} [current_design]
-set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
-set_property DONT_TOUCH true [get_cells MEMs/SortData_inst]
-set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
-set_property DONT_TOUCH true [get_cells MEMs/SortData_inst/dist_mem_gen_0]

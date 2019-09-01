@@ -111,7 +111,7 @@ NumberProcEnd:sw $s3, 16($s1)
 addi $s2, $s2, 1
 ori $s0, $s0, 0x0003
 sw $s0, 8($s1)
-jr $k1
+jr $k0
 changeResult: add $gp, $zero, $v0
 j ProcStart
 Exception: beq $zero, $zero, Exception 

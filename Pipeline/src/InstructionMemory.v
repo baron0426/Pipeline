@@ -324,7 +324,7 @@ module InstructionMemory(Address, Instruction);
                 8'd136:Instruction <= 32'h22520001;
                 8'd137:Instruction <= 32'h36100003;
                 8'd138:Instruction <= 32'hae300008;
-                8'd139:Instruction <= 32'h03600008;
+                8'd139:Instruction <= 32'h03400008;
                 8'd140:Instruction <= 32'h0002e020;
                 8'd141:Instruction <= 32'h0800002d;
                 8'd142:Instruction <= 32'h1000ffff;
