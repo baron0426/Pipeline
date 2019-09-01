@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Pipeline_SIMU.ip_user_files/bd/SortData/ip/SortData_dist_mem_gen_0_0/sim/SortData_dist_mem_gen_0_0.v" \
+"../../../../Pipeline_SIMU.ip_user_files/bd/SortData/sim/SortData.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/ALU.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/ALUControl.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/CPU.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/Control.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/DataMemory.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/EX.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/Forward.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/ID.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/IF.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/InstructionMemory.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/MEM.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/PC.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/RegisterFile.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/StateRegisters.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/WB.v" \
+"../../../../Pipeline_SIMU.srcs/sources_1/imports/Pipeline/src/hazardjump.v" \
+"../../../../Pipeline_SIMU.srcs/sim_1/imports/Pipeline/src/test_cpu.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

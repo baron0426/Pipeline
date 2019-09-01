@@ -4,8 +4,7 @@ Instruction counter gives 15192 insts.
 CPI = 19456/15192 = 1.28
 
 
-硬件測試
-實際週期數：0x49a9 = 18857
+硬件測試實際週期數：0x49a9 = 18857
 mars指令數：15192
 CPI = 1.24
 時序裕量（100M時鐘下）：0.164ns
