@@ -9,7 +9,7 @@ addi $t0, $zero, 0x40000014
 lw $t1, 0($t0)
 sub $gp, $t1, $gp #$gp save the total period elapsed
 add $s2, $zero, $zero #$s2 indicate if $gp has been displayed 
-addi $s0, $zero, 0xfffffff0  #CHANGE WHEN IMPLEMENT WITH HARDWARE
+addi $s0, $zero, 0xfffec77f  #CHANGE WHEN IMPLEMENT WITH HARDWARE
 addi $s1, $zero, 0x40000000 #$s1 save the base address of the timer
 sw $s0, 0($s1) 
 addi $s0, $zero, 0x0003 #$s0 save the TCON variable of the timer
@@ -35,7 +35,7 @@ L1:     addi $a0, $a0, -1 #Let m = m-1;
 Interrupt: 
 andi $s0, $s0, 0x0000
 sw $s0, 8($s1)
-bgt $s2, 11,  changeResult #CHANGE WHEN IMPLEMENT WITH HARDWARE
+bgt $s2, 2000,  changeResult #CHANGE WHEN IMPLEMENT WITH HARDWARE
 ProcStart:
 andi $t1, $s3, 0x00000f00
 ori $s3, $s3, 0x0f00

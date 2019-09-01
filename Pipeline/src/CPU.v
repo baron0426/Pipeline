@@ -1,7 +1,9 @@
-module CPU(reset, clk, leds, digit, digit_en);
+module CPU(reset, clk, leds, digit_out, digit_en);
 	input reset, clk;
 	output [7:0] leds;
-	output [7:0] digit;
+	wire [7:0] digit;
+	output [7:0] digit_out;
+	assign digit_out = {1'b1, digit[6:0]};
 	output [3:0] digit_en;
 	wire [31:0] PC;
 	wire [31:0] PC_next;
