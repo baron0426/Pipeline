@@ -2,3 +2,11 @@ start output on 18865th cycle
 total 19461-5=19456 cycles
 Instruction counter gives 15192 insts.
 CPI = 19456/15192 = 1.28
+
+
+硬件測試
+實際週期數：0x49ab = 18859
+mars指令數：15192
+CPI = 1.24
+時序裕量（100M時鐘下）：0.164ns
+相應最高主頻：101.66MHz
