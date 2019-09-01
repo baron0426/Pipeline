@@ -112,8 +112,7 @@ exitMidPointLoop:lw $t2, 4($t1) #$t2 = stride_2_pointer = stride_1_pointer->next
 	addi $sp, $sp, 4
 	jr $ra
 #printing array content	
-printArrayContent:lw $s5, 4($s2) #$s5 = head of the link list
-lw $t8, 0($s5)
+printArrayContent:lw $t8, 0($zero)
 addi $t0, $zero, 0x40000014
 lw $t1, 0($t0)
 sub $gp, $t1, $gp #$gp save the total period elapsed
@@ -203,8 +202,8 @@ addi $s2, $s2, 1
 ori $s0, $s0, 0x0003
 sw $s0, 8($s1)
 jr $k0
-changeResult:add $s2, $zero, $zero
-	lw $gp, 0($t8)
+changeResult:lw $gp, 0($t8)
+	add $s2, $zero, $zero
 	lw $t8, 4($t8)
 	j ProcStart
 Exception: beq $zero, $zero, Exception 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_3" LaunchPart="xc7a35tcpg236-3" LaunchTime="1567343091">
+<GenRun Id="impl_3" LaunchPart="xc7a35tcpg236-3" LaunchTime="1567346321">
   <File Type="BITSTR-BMM" Name="CPU_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPU_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPU_timing_summary_init.rpt"/>
@@ -235,9 +235,9 @@
     <Step Id="power_opt_design"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
-    <Step Id="phys_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
     <Step Id="route_design"/>
-    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1"/>
     <Step Id="write_bitstream"/>
   </Strategy>
 </GenRun>

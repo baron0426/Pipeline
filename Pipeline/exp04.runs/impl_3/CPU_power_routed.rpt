@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun Sep  1 21:07:43 2019
+| Date             : Sun Sep  1 22:00:21 2019
 | Host             : DESKTOP-HIS8ABG running 64-bit major release  (build 9200)
 | Command          : report_power -file CPU_power_routed.rpt -pb CPU_power_summary_routed.pb -rpx CPU_power_routed.rpx
 | Design           : CPU
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.118        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.047        |
+| Dynamic (W)              | 0.046        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 99.4         |
@@ -53,8 +53,8 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.008 |        3 |       --- |             --- |
-| Slice Logic    |     0.013 |     4247 |       --- |             --- |
-|   LUT as Logic |     0.013 |     2050 |     20800 |            9.86 |
+| Slice Logic    |     0.013 |     4248 |       --- |             --- |
+|   LUT as Logic |     0.013 |     2045 |     20800 |            9.83 |
 |   Register     |    <0.001 |     1562 |     41600 |            3.75 |
 |   CARRY4       |    <0.001 |       59 |      8150 |            0.72 |
 |   F7/F8 Muxes  |    <0.001 |      358 |     32600 |            1.10 |
@@ -142,8 +142,8 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| CPU                |     0.047 |
-|   EX_MEM           |     0.006 |
+| CPU                |     0.046 |
+|   EX_MEM           |     0.005 |
 |   ID_EX            |     0.016 |
 |   IDs              |     0.007 |
 |     register_file1 |     0.007 |

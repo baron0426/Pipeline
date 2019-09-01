@@ -17,9 +17,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11092 
+INFO: Helper process launched with PID 5468 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 368.555 ; gain = 100.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 368.105 ; gain = 100.359
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/youzq/Pipeline/Pipeline/src/CPU.v:1]
 INFO: [Synth 8-6157] synthesizing module 'PC' [D:/youzq/Pipeline/Pipeline/src/PC.v:1]
@@ -212,7 +212,7 @@ WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port q
 WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[23]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 471.855 ; gain = 204.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 471.254 ; gain = 203.508
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -225,10 +225,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 471.855 ; gain = 204.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 471.254 ; gain = 203.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 471.855 ; gain = 204.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 471.254 ; gain = 203.508
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -241,24 +241,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/youzq/Pipeline/Pipeline/exp04.runs/synth_2/dont_touch.xdc]
 Finished Parsing XDC File [D:/youzq/Pipeline/Pipeline/exp04.runs/synth_2/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 774.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.621 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.621 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 774.832 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 774.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 774.621 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 774.621 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -266,7 +266,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for MEMs/SortData_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for MEMs/SortData_inst/dist_mem_gen_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "PC0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "MemRead" won't be mapped to RAM because it is too sparse
@@ -313,7 +313,7 @@ INFO: [Synth 8-5545] ROM "TCON" won't be mapped to RAM because address size (32)
 INFO: [Synth 8-5545] ROM "leds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "digit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -510,7 +510,7 @@ INFO: [Synth 8-5545] ROM "IF_ID/PC0" won't be mapped to RAM because address size
 WARNING: [Synth 8-3917] design CPU has port digit_out[7] driven by constant 1
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IF_ID/Instruction_reg[30] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -548,13 +548,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 774.832 ; gain = 507.008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 774.621 ; gain = 506.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 951.418 ; gain = 683.594
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 949.773 ; gain = 682.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -603,96 +603,96 @@ INFO: [Synth 8-5816] Retiming module `SortData' done
 RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[3] along load instance i_110
 RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[2] along load instance i_110
 RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[4] along load instance i_110
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1951
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1951
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1951
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1957
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1957
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1957
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2231
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1892
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2231
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1928
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1928
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1928
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1892
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1908
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1908
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1908
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1943
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1943
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1943
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1908
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1858
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1908
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1858
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2232
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1875
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2232
-RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1858
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1858
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2233
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1858
-RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2233
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1875
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1951
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1951
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1951
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1957
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1957
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1957
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2231
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1892
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2231
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1928
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1928
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1928
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1892
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1908
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1908
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1908
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1943
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1943
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1943
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1957
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1951
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1943
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1928
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1908
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1858
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1957
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1951
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1943
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1928
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1908
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1892
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1858
-RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2231
-RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2232
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1953
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1953
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1953
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1959
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1959
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1959
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2233
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1894
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2233
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1930
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1894
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1910
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1945
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2234
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1877
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2234
+RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1860
+RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1877
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1953
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1953
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1953
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1959
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1959
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1959
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2233
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1894
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2233
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1930
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1894
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1910
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1945
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1959
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1953
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1930
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1959
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1953
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1930
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1860
 RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2233
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2234
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2235
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2235
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2234
 RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2233
-RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2232
-RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2231
-RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1875
-RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2232
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1875
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2232
-RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1858
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1858
-RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2233
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1858
-RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2233
-RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1875
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2234
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1877
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2234
+RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1860
+RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1877
 INFO: [Synth 8-5816] Retiming module `CPU`
 	Effective logic levels on critical path before retiming is: 22
 	Total number of crtical paths = 21
@@ -771,7 +771,7 @@ WARNING: [Synth 8-3332] Sequential element (ID_EX/ALUSrc1_reg_fret_fret) is unus
 INFO: [Synth 8-6837] The timing for the instance data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -795,7 +795,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -808,7 +808,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -820,25 +820,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -860,8 +860,8 @@ Report Cell Usage:
 |4     |LUT2     |   103|
 |5     |LUT3     |   180|
 |6     |LUT4     |   252|
-|7     |LUT5     |   354|
-|8     |LUT6     |  1358|
+|7     |LUT5     |   352|
+|8     |LUT6     |  1361|
 |9     |MUXF7    |   279|
 |10    |MUXF8    |    79|
 |11    |RAMB18E1 |     1|
@@ -877,7 +877,7 @@ Report Instance Areas:
 +------+----------------------------------------+---------------------------+------+
 |      |Instance                                |Module                     |Cells |
 +------+----------------------------------------+---------------------------+------+
-|1     |top                                     |                           |  4261|
+|1     |top                                     |                           |  4262|
 |2     |  EX_MEM                                |EXMEMR                     |   295|
 |3     |  EXs                                   |EX                         |    12|
 |4     |    alu1                                |ALU                        |    12|
@@ -894,30 +894,30 @@ Report Instance Areas:
 |15    |            \gen_rom.rom_inst           |rom                        |    30|
 |16    |  WBs                                   |WB                         |    32|
 |17    |  data_memory_inst                      |DataMemory                 |     1|
-|18    |  pc                                    |PC                         |   253|
+|18    |  pc                                    |PC                         |   254|
 +------+----------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 179 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 985.824 ; gain = 415.023
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 985.824 ; gain = 718.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 984.469 ; gain = 413.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 984.469 ; gain = 716.723
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 418 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 985.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 984.469 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 118 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 985.824 ; gain = 724.594
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 985.824 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 984.469 ; gain = 723.484
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 984.469 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/youzq/Pipeline/Pipeline/exp04.runs/synth_2/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep  1 21:05:59 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  1 21:55:53 2019...
