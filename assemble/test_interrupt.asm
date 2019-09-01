@@ -32,7 +32,7 @@ L1:     addi $a0, $a0, -1 #Let m = m-1;
 	add $v0, $a0, $v0 #let $v0 =  sum(m) = m + sum(m-1)
 	jr $ra           #return $v0 to  sum(m+1) or the OS
 Interrupt: 
-andi $s0, $s0, 0x0009
+andi $s0, $s0, 0x0000
 sw $s0, 8($s1)
 bgt $s2, 11,  changeResult #CHANGE WHEN IMPLEMENT WITH HARDWARE
 ProcStart:addi $s3, $s3, 0 #$s3 = {digit_en, digit}
@@ -106,10 +106,9 @@ NumberE: andi $s3, $s3, 0x0f06
 j NumberProcEnd
 NumberF: andi $s3, $s3, 0x0f0e 
 j NumberProcEnd
-NumberProcEnd:
-sw $s3, 16($s1)
+NumberProcEnd:sw $s3, 16($s1)
 addi $s2, $s2, 1
-ori $s0, $s0, 0x0002
+ori $s0, $s0, 0x0003
 sw $s0, 8($s1)
 jr $k1
 changeResult: add $gp, $zero, $v0

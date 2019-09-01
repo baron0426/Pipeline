@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="201610308000fs"></ZoomStartTime>
-      <ZoomEndTime time="201800508001fs"></ZoomEndTime>
-      <Cursor1Time time="201800000000fs"></Cursor1Time>
+      <ZoomStartTime time="1086666666fs"></ZoomStartTime>
+      <ZoomEndTime time="2703666667fs"></ZoomEndTime>
+      <Cursor1Time time="1800000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="307"></NameColumnWidth>
-      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+      <ValueColumnWidth column_width="167"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="79" />
+   <WVObjectSize size="83" />
    <wvobject fp_name="/test_cpu/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -47,6 +47,42 @@
    <wvobject fp_name="/test_cpu/cpu1/IF_ID/PC" type="array">
       <obj_property name="ElementShortName">PC[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/Exception" type="logic">
+      <obj_property name="ElementShortName">Exception</obj_property>
+      <obj_property name="ObjectShortName">Exception</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/Interruption" type="logic">
+      <obj_property name="ElementShortName">Interruption</obj_property>
+      <obj_property name="ObjectShortName">Interruption</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/Interruption_in" type="logic">
+      <obj_property name="ElementShortName">Interruption_in</obj_property>
+      <obj_property name="ObjectShortName">Interruption_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/leds" type="array">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/digit" type="array">
+      <obj_property name="ElementShortName">digit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/digit_en" type="array">
+      <obj_property name="ElementShortName">digit_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">digit_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/MEMs/TH" type="array">
+      <obj_property name="ElementShortName">TH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/MEMs/TL" type="array">
+      <obj_property name="ElementShortName">TL[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TL[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cpu/cpu1/MEMs/TCON" type="array">
+      <obj_property name="ElementShortName">TCON[2:0]</obj_property>
+      <obj_property name="ObjectShortName">TCON[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/IDs/register_file1/RF_data" type="array">
       <obj_property name="ElementShortName">RF_data[31:1][31:0]</obj_property>
@@ -292,14 +328,6 @@
       <obj_property name="ElementShortName">WB_MemtoReg</obj_property>
       <obj_property name="ObjectShortName">WB_MemtoReg</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/Exception" type="logic">
-      <obj_property name="ElementShortName">Exception</obj_property>
-      <obj_property name="ObjectShortName">Exception</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/Interruption" type="logic">
-      <obj_property name="ElementShortName">Interruption</obj_property>
-      <obj_property name="ObjectShortName">Interruption</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_cpu/cpu1/data_memory_inst/RAM_data" type="array">
       <obj_property name="ElementShortName">RAM_data[511:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">RAM_data[511:0][31:0]</obj_property>
@@ -323,17 +351,5 @@
    <wvobject fp_name="/test_cpu/cpu1/Systick" type="array">
       <obj_property name="ElementShortName">Systick[31:0]</obj_property>
       <obj_property name="ObjectShortName">Systick[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/leds" type="array">
-      <obj_property name="ElementShortName">leds[7:0]</obj_property>
-      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/digit" type="array">
-      <obj_property name="ElementShortName">digit[7:0]</obj_property>
-      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_cpu/cpu1/digit_en" type="array">
-      <obj_property name="ElementShortName">digit_en[3:0]</obj_property>
-      <obj_property name="ObjectShortName">digit_en[3:0]</obj_property>
    </wvobject>
 </wave_config>

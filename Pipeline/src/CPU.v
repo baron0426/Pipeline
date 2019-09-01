@@ -96,11 +96,13 @@ module CPU(reset, clk, leds, digit, digit_en);
 	/*Exception and Interruption*/
 	wire Exception;
 	wire Interruption;
+	wire Interruption_in;
+	assign Interruption_in = Interruption && (PC[31]==1'b0);
 	
 	PC pc(.reset(reset), .clk(clk), .PC_next(PC_next), .PC(PC));
 	
 	HazardJumpUnit hazard_jump(.PC(PC), .stall(stall), .Jump(IDs_Jump), .Branch(Branch), .BranchCond(BranchCond), 
-	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(Interruption), .Exception(Exception),
+	.JumpTarget(JumpTarget), .branchCmpA(branchCmpA), .Interrupt(Interruption_in), .Exception(Exception),
 	.IFIDFlush(IFIDFlush), .IDEXFlush(IDEXFlush), .PC_next(PC_next));
 	
 	ForwardingUnit forward(.stall(stall), .BranchSrcA(BranchSrcA), .BranchSrcB(BranchSrcB),
@@ -120,7 +122,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	.RegWrite(IDs_RegWrite), .RegDest(IDs_RegDest), .MemRead(IDs_MemRead), .MemWrite(IDs_MemWrite), .MemtoReg(IDs_MemtoReg), 
 	.ALUSrc1(IDs_ALUSrc1), .ALUSrc2(IDs_ALUSrc2), .ALUCtl(IDs_ALUCtl), .ALU_Sign(IDs_ALU_sign), 
 	.shamt(IDs_shamt), .Imm(IDs_Imm), .rs(IDs_rs), .rt(IDs_rt), .branchCmpA(branchCmpA),.branchCmpB(IDs_DataBusB), .JumpTarget(JumpTarget),
-	.Jump(IDs_Jump), .EXForwardSrc(MEMR_ALUOut), .PC(IDs_PC), .Branch(Branch), .Exception(Exception) ,.Interrupt(0));
+	.Jump(IDs_Jump), .EXForwardSrc(MEMR_ALUOut), .PC(IDs_PC), .Branch(Branch), .Exception(Exception) ,.Interrupt(Interruption_in));
     
 	IDEXR ID_EX(.reset(IDEXFlush), .clk(clk), .RegWrite_next(IDs_RegWrite), .RegDest_next(IDs_RegDest), .MemRead_next(IDs_MemRead), .MemWrite_next(IDs_MemWrite), 
 	.MemtoReg_next(IDs_MemtoReg), .ALUSrc1_next(IDs_ALUSrc1), .ALUSrc2_next(IDs_ALUSrc2), .ALUCtl_next(IDs_ALUCtl), .ALU_sign_next(IDs_ALU_sign), .shamt_next(IDs_shamt), .DataBusA_next(branchCmpA), .DataBusB_next(IDs_DataBusB), .Imm_next(IDs_Imm), 
@@ -133,7 +135,7 @@ module CPU(reset, clk, leds, digit, digit_en);
 	.ID_ALU_Sign(EXs_ALU_sign), .ID_shamt(EXs_shamt), .ID_DataBusA(EXs_DataBusA), .ID_DataBusB(EXs_DataBusB), 
 	.ID_Imm(EXs_Imm), .MEMForwardSrc(MEMs_ALUOut), .WBForwardSrc(WB_ID_WriteBackData), 
 	.Forward1(Forward1), .Forward2(Forward2), .MEM_ALUOut(MEMR_ALUOut), .MEM_WrData(MEMR_WrData),
-	.PC_EX(EXs_PC),.Interrupt(Interruption));
+	.PC_EX(EXs_PC));
 	
 	EXMEMR EX_MEM(.clk(clk), .EX_RegWrite(EXs_RegWrite), .EX_RegDest(EXs_RegDest), .EX_MemRead(EXs_MemRead), 
 	.EX_MemWrite(EXs_MemWrite), .EX_MemtoReg(EXs_MemtoReg), .EX_ALUOut(MEMR_ALUOut), .EX_WrData(MEMR_WrData), 

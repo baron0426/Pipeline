@@ -124,7 +124,7 @@ MEM_RegWrite, MEM_RegDest, MEM_MemRead, MEM_MemWrite, MEM_MemtoReg, MEM_ALUOut, 
 		MEM_RegDest <= EX_RegDest;
 		MEM_MemRead <= EX_MemRead;
 		MEM_MemWrite <= EX_MemWrite;
-		MEM_MemtoReg <= EX_MemtoReg[0];
+		MEM_MemtoReg <= (EX_MemtoReg == 2'b01) ? 1 : 0;
 		MEM_ALUOut <= EX_ALUOut;
 		MEM_WrData <= EX_WrData;
 	end

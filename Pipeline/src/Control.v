@@ -38,6 +38,7 @@ module Control(OpCode, Funct, RegimmFunct,
 		(OpCode == 6'h00 && (Funct ==6'h08 || Funct == 6'h09)) ? 3'bXXX :
 		3'b000;
 	assign RegWrite = 
+	    (Exception || Interrupt) ? 1'b1 :
 		(OpCode == 6'h2b || OpCode == 6'h04 || OpCode == 6'h02) ? 1'b0 :
 		(OpCode == 6'h05 || OpCode == 6'h06 || OpCode == 6'h07) ? 1'b0 :
 		(OpCode == 6'h00 && Funct == 6'h08) ? 1'b0 :
@@ -55,7 +56,8 @@ module Control(OpCode, Funct, RegimmFunct,
 	assign MemWrite = 
 		(OpCode == 6'h2b) ? 1 : 0;
 	assign MemtoReg[1:0] = 
-	    (Exception || Interrupt) ? 2'b10 :
+	    (Exception) ? 2'b10 :
+	    (Interrupt) ? 2'b11 :
 		(OpCode == 6'h23) ? 2'b01 :
 		(OpCode == 6'h03) ? 2'b10 :
 		(OpCode == 6'h01) ? 2'b10 :

@@ -1,5 +1,5 @@
 module EX(ID_ALUSrc1, ID_ALUSrc2, ID_ALUCtl, ID_ALU_Sign, ID_shamt, ID_DataBusA, ID_DataBusB, ID_Imm, ID_MemtoReg,
-MEMForwardSrc, WBForwardSrc, Forward1, Forward2, MEM_ALUOut, MEM_WrData, PC_EX, Interrupt);
+MEMForwardSrc, WBForwardSrc, Forward1, Forward2, MEM_ALUOut, MEM_WrData, PC_EX);
 	/*From ID_EX register*/
 	/*input ID_RegWrite;
 	input [4:0] ID_RegDest;
@@ -21,7 +21,6 @@ MEMForwardSrc, WBForwardSrc, Forward1, Forward2, MEM_ALUOut, MEM_WrData, PC_EX, 
 	input [31:0] WBForwardSrc;
 	input [1:0] Forward1;
 	input [1:0] Forward2;
-	input Interrupt;
 	
 	/*To EX_MEM Register*/
 	/*output wire MEM_RegWrite;
@@ -40,7 +39,7 @@ MEMForwardSrc, WBForwardSrc, Forward1, Forward2, MEM_ALUOut, MEM_WrData, PC_EX, 
 	assign ALU_in1 = ID_ALUSrc1 ? {17'h00000, ID_shamt}: ((Forward1==2'b00) ? ID_DataBusA : ((Forward1 == 2'b10) ? WBForwardSrc : MEMForwardSrc));
 	assign ALU_in2 = ID_ALUSrc2 ? ID_Imm               : ((Forward2==2'b00) ? ID_DataBusB : ((Forward2 == 2'b10) ? WBForwardSrc : MEMForwardSrc));
 	ALU alu1(.in1(ALU_in1), .in2(ALU_in2), .ALUCtl(ID_ALUCtl), .Sign(ID_ALU_Sign), .out(ALUOut), .zero(MEM_ALU_Zero));
-	assign MEM_ALUOut = (Interrupt)? (PC_EX) :((ID_MemtoReg == 2'b10) ? (PC_EX + 32'd4) : ALUOut);
+	assign MEM_ALUOut = (ID_MemtoReg == 2'b11)? (PC_EX) :((ID_MemtoReg == 2'b10) ? (PC_EX + 32'd4) : ALUOut);
 	assign MEM_WrData = ((Forward2==2'b00) ? ID_DataBusB : ((Forward2 == 2'b10) ? WBForwardSrc : MEMForwardSrc));
 	/*
 	assign MEM_RegWrite = ID_RegWrite;

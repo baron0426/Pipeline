@@ -76,6 +76,10 @@ leds, digit, digit_en, Systick, Interrupt);
 	      if(TL == 32'hffffffff) TL <= TH;
 	      else TL <= TL + 1;
 	  end
+	  else if (TCON == 3'b000)
+	  begin
+	      TL <= TH;
+	  end
 	end
 	//DataMemory data_memory_inst(.reset(reset), .clk(clk), .Address(EX_ALUOut), .Write_data(EX_WrData), .Read_data(RAMMemReadOut), .MemRead(EX_MemRead), .MemWrite(EX_MemWrite));
 	//assign WB_RegWrite = EX_RegWrite;
