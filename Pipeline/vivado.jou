@@ -1,104 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Sep  1 22:05:38 2019
-# Process ID: 19484
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep  4 19:01:55 2019
+# Process ID: 6968
 # Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20228 D:\youzq\Pipeline\Pipeline\exp04.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8520 D:\youzq\Pipeline\Pipeline\exp04.xpr
 # Log file: D:/youzq/Pipeline/Pipeline/vivado.log
 # Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/youzq/Pipeline/Pipeline/exp04.xpr
+open_project -read_only D:/youzq/Pipeline/Pipeline/exp04.xpr
 update_compile_order -fileset sources_1
-save_project_as Pipeline_SIMU D:/youzq/Pipeline/Pipeline/Pipeline_SIMU -exclude_run_results -force
-import_files
-launch_simulation
-open_wave_config D:/youzq/Pipeline/Pipeline/Pipeline_SIMU/Pipeline_SIMU.srcs/sim_1/imports/Pipeline/test_cpu_behav_sum.wcfg
-source test_cpu.tcl
-run 20000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-run 2000 ns
-open_bd_design {D:/youzq/Pipeline/Pipeline/Pipeline_SIMU/Pipeline_SIMU.srcs/sources_1/bd/SortData/SortData.bd}
-startgroup
-set_property -dict [list CONFIG.coefficient_file {d:/youzq/Pipeline/Pipeline/Pipeline_SIMU/Pipeline_SIMU.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/123}] [get_bd_cells dist_mem_gen_0]
-endgroup
-relaunch_sim
-run 2000 ns
-open_bd_design {D:/youzq/Pipeline/Pipeline/Pipeline_SIMU/Pipeline_SIMU.srcs/sources_1/bd/SortData/SortData.bd}
-startgroup
-set_property -dict [list CONFIG.coefficient_file {D:/youzq/Pipeline/Pipeline/Pipeline_SIMU/Pipeline_SIMU.srcs/sources_1/imports/Pipeline/SortData_dist_mem_gen_0_0.coe}] [get_bd_cells dist_mem_gen_0]
-endgroup
-relaunch_sim
-run 20000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-run 10000 ns
-relaunch_sim
-run 10000 ns
-run 100000 ns
-run 100000 ns
-open_project D:/youzq/Pipeline/Pipeline/exp04.xpr
-update_compile_order -fileset sources_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {D:/youzq/Pipeline/Pipeline/exp04.runs/impl_3/CPU.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/youzq/Pipeline/Pipeline/exp04.runs/impl_3/CPU.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-current_project Pipeline_SIMU
-close_sim
-close_project
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/youzq/Pipeline/Pipeline/exp04.runs/impl_3/CPU.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

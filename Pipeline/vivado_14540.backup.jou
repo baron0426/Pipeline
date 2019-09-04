@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep  2 18:12:35 2019
+# Process ID: 14540
+# Current directory: D:/youzq/Pipeline/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7552 D:\youzq\Pipeline\Pipeline\exp04.xpr
+# Log file: D:/youzq/Pipeline/Pipeline/vivado.log
+# Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/youzq/test/Pipeline/exp04.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+close_design
+open_run impl_3
+check_timing -verbose -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
