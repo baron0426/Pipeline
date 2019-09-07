@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Sep  7 20:20:02 2019
-# Process ID: 14864
+# Start of session at: Wed Sep  4 19:01:55 2019
+# Process ID: 6968
 # Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8316 D:\youzq\Pipeline\Pipeline\exp04.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8520 D:\youzq\Pipeline\Pipeline\exp04.xpr
 # Log file: D:/youzq/Pipeline/Pipeline/vivado.log
 # Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
@@ -24,5 +24,7 @@ List of locked IPs:
 SortData_dist_mem_gen_0_0
 
 WARNING: [Project 1-229] Project 'exp04.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
-open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 684.520 ; gain = 60.066
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 701.512 ; gain = 70.992
 update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  4 21:20:41 2019...

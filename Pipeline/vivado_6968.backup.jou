@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Sep  7 20:20:02 2019
-# Process ID: 14864
+# Start of session at: Wed Sep  4 19:01:55 2019
+# Process ID: 6968
 # Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8316 D:\youzq\Pipeline\Pipeline\exp04.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8520 D:\youzq\Pipeline\Pipeline\exp04.xpr
 # Log file: D:/youzq/Pipeline/Pipeline/vivado.log
 # Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
