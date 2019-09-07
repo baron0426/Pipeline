@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Sep  7 20:20:02 2019
+# Process ID: 14864
+# Current directory: D:/youzq/Pipeline/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8316 D:\youzq\Pipeline\Pipeline\exp04.xpr
+# Log file: D:/youzq/Pipeline/Pipeline/vivado.log
+# Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/youzq/Pipeline/Pipeline/exp04.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1663] The design 'SortData.bd' cannot be modified due to following reason(s):
+* Project is read-only. Please run 'save_project_as' before making any change to the bd-design. 
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'SortData.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+SortData_dist_mem_gen_0_0
+
+WARNING: [Project 1-229] Project 'exp04.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 684.520 ; gain = 60.066
+update_compile_order -fileset sources_1

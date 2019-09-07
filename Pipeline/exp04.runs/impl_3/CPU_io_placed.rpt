@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Sun Sep  1 21:59:31 2019
-| Host                      : DESKTOP-HIS8ABG running 64-bit major release  (build 9200)
+| Date                      : Sat Sep  7 23:18:49 2019
+| Host                      : Baron running 64-bit major release  (build 9200)
 | Command                   : report_io -file CPU_io_placed.rpt
 | Design                    : CPU
 | Device                    : xc7a35t

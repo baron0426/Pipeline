@@ -1,14 +1,22 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Sep  7 20:20:02 2019
-# Process ID: 14864
-# Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8316 D:\youzq\Pipeline\Pipeline\exp04.xpr
-# Log file: D:/youzq/Pipeline/Pipeline/vivado.log
-# Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep  7 22:39:51 2019
+# Process ID: 19536
+# Current directory: D:/Baron/Pipeline/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21424 D:\Baron\Pipeline\Pipeline\exp04.xpr
+# Log file: D:/Baron/Pipeline/Pipeline/vivado.log
+# Journal file: D:/Baron/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project -read_only D:/youzq/Pipeline/Pipeline/exp04.xpr
+open_project D:/Baron/Pipeline/Pipeline/exp04.xpr
 update_compile_order -fileset sources_1
+set_property strategy Performance_ExtraTimingOpt [get_runs impl_3]
+set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_3]
+reset_run synth_2
+launch_runs impl_3 -to_step write_bitstream -jobs 2
+wait_on_run impl_3
+open_run impl_3
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1

@@ -1,28 +1,54 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Sep  7 20:20:02 2019
-# Process ID: 14864
-# Current directory: D:/youzq/Pipeline/Pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8316 D:\youzq\Pipeline\Pipeline\exp04.xpr
-# Log file: D:/youzq/Pipeline/Pipeline/vivado.log
-# Journal file: D:/youzq/Pipeline/Pipeline\vivado.jou
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep  7 22:39:51 2019
+# Process ID: 19536
+# Current directory: D:/Baron/Pipeline/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21424 D:\Baron\Pipeline\Pipeline\exp04.xpr
+# Log file: D:/Baron/Pipeline/Pipeline/vivado.log
+# Journal file: D:/Baron/Pipeline/Pipeline\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project -read_only D:/youzq/Pipeline/Pipeline/exp04.xpr
+open_project D:/Baron/Pipeline/Pipeline/exp04.xpr
+INFO: [Project 1-313] Project file moved from 'D:/youzq/Pipeline/Pipeline' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-WARNING: [BD 41-1663] The design 'SortData.bd' cannot be modified due to following reason(s):
-* Project is read-only. Please run 'save_project_as' before making any change to the bd-design. 
-
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'SortData.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-SortData_dist_mem_gen_0_0
-
-WARNING: [Project 1-229] Project 'exp04.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
-open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 684.520 ; gain = 60.066
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 670.891 ; gain = 115.523
 update_compile_order -fileset sources_1
+set_property strategy Performance_ExtraTimingOpt [get_runs impl_3]
+set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_3]
+reset_run synth_2
+launch_runs impl_3 -to_step write_bitstream -jobs 2
+[Sat Sep  7 23:14:22 2019] Launched synth_2...
+Run output will be captured here: D:/Baron/Pipeline/Pipeline/exp04.runs/synth_2/runme.log
+[Sat Sep  7 23:14:22 2019] Launched impl_3...
+Run output will be captured here: D:/Baron/Pipeline/Pipeline/exp04.runs/impl_3/runme.log
+open_run impl_3
+INFO: [Netlist 29-17] Analyzing 418 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.768 . Memory (MB): peak = 1767.012 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.769 . Memory (MB): peak = 1767.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1767.012 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1889.836 ; gain = 972.617
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
