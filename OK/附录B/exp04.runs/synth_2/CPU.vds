@@ -1,0 +1,879 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep  8 12:04:29 2019
+# Process ID: 18668
+# Current directory: D:/youzq/test/Pipeline/exp04.runs/synth_2
+# Command line: vivado.exe -log CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
+# Log file: D:/youzq/test/Pipeline/exp04.runs/synth_2/CPU.vds
+# Journal file: D:/youzq/test/Pipeline/exp04.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source CPU.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top CPU -part xc7a35tcpg236-3 -retiming
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-3
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 36920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 685.020 ; gain = 177.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/youzq/test/Pipeline/src/CPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/youzq/test/Pipeline/src/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [D:/youzq/test/Pipeline/src/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'HazardJumpUnit' [D:/youzq/test/Pipeline/src/hazardjump.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'HazardJumpUnit' (2#1) [D:/youzq/test/Pipeline/src/hazardjump.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/youzq/test/Pipeline/src/Forward.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (3#1) [D:/youzq/test/Pipeline/src/Forward.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF' [D:/youzq/test/Pipeline/src/IF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/youzq/test/Pipeline/src/InstructionMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (4#1) [D:/youzq/test/Pipeline/src/InstructionMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF' (5#1) [D:/youzq/test/Pipeline/src/IF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IFIDR' [D:/youzq/test/Pipeline/src/StateRegisters.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IFIDR' (6#1) [D:/youzq/test/Pipeline/src/StateRegisters.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID' [D:/youzq/test/Pipeline/src/ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Control' [D:/youzq/test/Pipeline/src/Control.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Control' (7#1) [D:/youzq/test/Pipeline/src/Control.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [D:/youzq/test/Pipeline/src/ALUControl.v:2]
+	Parameter aluAND bound to: 5'b00000 
+	Parameter aluOR bound to: 5'b00001 
+	Parameter aluADD bound to: 5'b00010 
+	Parameter aluSUB bound to: 5'b00110 
+	Parameter aluSLT bound to: 5'b00111 
+	Parameter aluNOR bound to: 5'b01100 
+	Parameter aluXOR bound to: 5'b01101 
+	Parameter aluSLL bound to: 5'b10000 
+	Parameter aluSRL bound to: 5'b11000 
+	Parameter aluSRA bound to: 5'b11001 
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (8#1) [D:/youzq/test/Pipeline/src/ALUControl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [D:/youzq/test/Pipeline/src/RegisterFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (9#1) [D:/youzq/test/Pipeline/src/RegisterFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (10#1) [D:/youzq/test/Pipeline/src/ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IDEXR' [D:/youzq/test/Pipeline/src/StateRegisters.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'IDEXR' (11#1) [D:/youzq/test/Pipeline/src/StateRegisters.v:25]
+INFO: [Synth 8-6157] synthesizing module 'EX' [D:/youzq/test/Pipeline/src/EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/youzq/test/Pipeline/src/ALU.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (12#1) [D:/youzq/test/Pipeline/src/ALU.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (13#1) [D:/youzq/test/Pipeline/src/EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXMEMR' [D:/youzq/test/Pipeline/src/StateRegisters.v:104]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEMR' (14#1) [D:/youzq/test/Pipeline/src/StateRegisters.v:104]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [D:/youzq/test/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SortData' [D:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
+INFO: [Synth 8-638] synthesizing module 'SortData_dist_mem_gen_0_0' [d:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 256 - type: integer 
+	Parameter C_HAS_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_D bound to: 0 - type: integer 
+	Parameter C_HAS_DPO bound to: 0 - type: integer 
+	Parameter C_HAS_DPRA bound to: 0 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 0 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: SortData_dist_mem_gen_0_0.mif - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 1 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_13' declared at 'd:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/ipshared/0bf5/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_13' [d:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'SortData_dist_mem_gen_0_0' (18#1) [d:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/ip/SortData_dist_mem_gen_0_0/synth/SortData_dist_mem_gen_0_0.vhd:66]
+INFO: [Synth 8-6155] done synthesizing module 'SortData' (19#1) [D:/youzq/test/Pipeline/exp04.srcs/sources_1/bd/SortData/synth/SortData.v:13]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/youzq/test/Pipeline/src/MEM.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (20#1) [D:/youzq/test/Pipeline/src/MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/youzq/test/Pipeline/src/DataMemory.v:2]
+	Parameter RAM_SIZE bound to: 512 - type: integer 
+	Parameter RAM_SIZE_BIT bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (21#1) [D:/youzq/test/Pipeline/src/DataMemory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'MEMWBR' [D:/youzq/test/Pipeline/src/StateRegisters.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWBR' (22#1) [D:/youzq/test/Pipeline/src/StateRegisters.v:133]
+INFO: [Synth 8-6157] synthesizing module 'WB' [D:/youzq/test/Pipeline/src/WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (23#1) [D:/youzq/test/Pipeline/src/WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (24#1) [D:/youzq/test/Pipeline/src/CPU.v:1]
+WARNING: [Synth 8-3917] design CPU has port digit_out[7] driven by constant 1
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[28]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[27]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[26]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[25]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[24]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[23]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[22]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[21]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[20]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[19]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[18]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[17]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[16]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[15]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[14]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[13]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[12]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[11]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[1]
+WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[0]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[31]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[30]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[29]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[28]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[27]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[26]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[25]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[24]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[23]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[22]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[21]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[20]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[19]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[18]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[17]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[16]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[15]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[14]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[13]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[12]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[11]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[10]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[9]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[8]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[7]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[6]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[5]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[4]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[3]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[2]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[1]
+WARNING: [Synth 8-3331] design rom has unconnected port qspo[0]
+WARNING: [Synth 8-3331] design rom has unconnected port clk
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_ce
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_rst
+WARNING: [Synth 8-3331] design rom has unconnected port qspo_srst
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[23]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[22]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[21]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[20]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[19]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[18]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[17]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[16]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[15]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[14]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[13]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[12]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[11]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[10]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[9]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[8]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[7]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[6]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[5]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[4]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[3]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[2]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[1]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port dpo[0]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[31]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[30]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[29]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[28]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[27]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[26]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[25]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[24]
+WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_13_synth has unconnected port qdpo[23]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 790.770 ; gain = 282.914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 790.770 ; gain = 282.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 790.770 ; gain = 282.914
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/youzq/test/Pipeline/exp04.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [D:/youzq/test/Pipeline/exp04.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/youzq/test/Pipeline/exp04.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/youzq/test/Pipeline/exp04.runs/synth_2/dont_touch.xdc]
+Finished Parsing XDC File [D:/youzq/test/Pipeline/exp04.runs/synth_2/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 906.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 906.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for MEMs/SortData_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for MEMs/SortData_inst/dist_mem_gen_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "aluFunct" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/youzq/test/Pipeline/src/ALU.v:9]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   3 Input     31 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 45    
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 17    
+	   3 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 15    
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 49    
+	   5 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module HazardJumpUnit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+Module ForwardingUnit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 2     
+Module IF 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module IFIDR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module ALUControl 
+Detailed RTL Component Info : 
++---Muxes : 
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 31    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 31    
+Module ID 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     31 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module IDEXR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module EX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 2     
+Module EXMEMR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module MEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module DataMemory 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              16K Bit         RAMs := 1     
+Module MEMWBR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module WB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design CPU has port digit_out[7] driven by constant 1
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IF_ID/Instruction_reg[30] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------------+-------------------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                            | Depth x Width | Implemented As | 
++---------------------+-------------------------------------------------------+---------------+----------------+
+|rom                  | rom[255]                                              | 256x10        | LUT            | 
+|dist_mem_gen_v8_0_13 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[255] | 256x10        | LUT            | 
++---------------------+-------------------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DataMemory: | RAM_data_reg | 512 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 906.355 ; gain = 398.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1043.738 ; gain = 535.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DataMemory: | RAM_data_reg | 512 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `dist_mem_gen_v8_0_13`
+	Effective logic levels is 0, the effective logic levels of whole design is 22
+	Skipping retiming for this module
+
+INFO: [Synth 8-5816] Retiming module `dist_mem_gen_v8_0_13' done
+
+
+INFO: [Synth 8-5816] Retiming module `SortData_dist_mem_gen_0_0`
+	Effective logic levels is 0, the effective logic levels of whole design is 22
+	Skipping retiming for this module
+
+INFO: [Synth 8-5816] Retiming module `SortData_dist_mem_gen_0_0' done
+
+
+INFO: [Synth 8-5816] Retiming module `SortData`
+	Effective logic levels is 0, the effective logic levels of whole design is 22
+	Skipping retiming for this module
+
+INFO: [Synth 8-5816] Retiming module `SortData' done
+
+
+RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[3] along load instance i_110
+RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[2] along load instance i_110
+RETIMING: forward move fails for register EX_MEM/MEM_RegDest_reg[4] along load instance i_110
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1953
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1953
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1953
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1959
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1959
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1959
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2233
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1894
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2233
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1930
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1894
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1910
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1945
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2234
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1877
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2234
+RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1860
+RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1877
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[8]_fret along load instance i_1953
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[8] along load instance i_1953
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[8] along load instance i_1953
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[9]_fret along load instance i_1959
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[9] along load instance i_1959
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[9] along load instance i_1959
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[4]_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/shamt_reg[4] along load instance i_2233
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_1894
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[4] along load instance i_2233
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[6]_fret along load instance i_1930
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[6] along load instance i_1930
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[4] along load instance i_1894
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[5]_fret along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[5] along load instance i_1910
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[5] along load instance i_1910
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[7] along load instance i_1945
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[7]_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[7] along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1959
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1953
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1930
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[2]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1959
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1953
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1945
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1930
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1910
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1894
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/rt_reg[1]_fret_fret along load instance i_1860
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2233
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2234
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg along load instance i_2235
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2235
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2234
+RETIMING: forward move fails for register ID_EX/ALUSrc1_reg_fret along load instance i_2233
+RETIMING: forward move fails for register MEM_WB/WB_ALUOut_reg[3]_fret along load instance i_1877
+RETIMING: forward move fails for register ID_EX/shamt_reg[3] along load instance i_2234
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_1877
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[3] along load instance i_2234
+RETIMING: forward move fails for register MEM_WB/WB_MemtoReg_reg_fret__1 along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_1860
+RETIMING: forward move fails for register EX_MEM/MEM_ALUOut_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[2] along load instance i_1860
+RETIMING: forward move fails for register ID_EX/shamt_reg[2] along load instance i_2235
+RETIMING: forward move fails for register ID_EX/DataBusB_reg[3] along load instance i_1877
+INFO: [Synth 8-5816] Retiming module `CPU`
+	Effective logic levels on critical path before retiming is: 22
+	Total number of crtical paths = 21
+
+	Optimizing at the module level
+	Optimizing locally to improve critical paths(may not reduce worst delay)
+
+	Effective logic levels on critical path after retiming is: 20
+	Total number of crtical paths = 31
+	Numbers of forward move = 48, and backward move = 0
+
+	Retimed registers names:
+		EX_MEM/MEM_ALUOut_reg[1]_fret
+		EX_MEM/MEM_RegDest_reg[3]_fret
+		EX_MEM/MEM_RegDest_reg[3]_fret__1
+		EX_MEM/MEM_RegDest_reg[3]_fret_fret
+		EX_MEM/MEM_RegDest_reg[3]_fret_fret_fret
+		EX_MEM/MEM_RegDest_reg[3]_fret_fret_fret__0
+		ID_EX/ALUSrc1_reg_fret
+		ID_EX/rt_reg[1]_fret_fret
+		ID_EX/rt_reg[2]_fret_fret
+		ID_EX/rt_reg[2]_fret_fret_fret
+		ID_EX/rt_reg[2]_fret_fret_fret__0
+		MEM_WB/WB_ALUOut_reg[10]_fret
+		MEM_WB/WB_ALUOut_reg[10]_fret_fret
+		MEM_WB/WB_ALUOut_reg[11]_fret
+		MEM_WB/WB_ALUOut_reg[11]_fret_fret
+		MEM_WB/WB_ALUOut_reg[12]_fret
+		MEM_WB/WB_ALUOut_reg[12]_fret_fret
+		MEM_WB/WB_ALUOut_reg[13]_fret
+		MEM_WB/WB_ALUOut_reg[13]_fret_fret
+		MEM_WB/WB_ALUOut_reg[14]_fret
+		MEM_WB/WB_ALUOut_reg[14]_fret_fret
+		MEM_WB/WB_ALUOut_reg[15]_fret
+		MEM_WB/WB_ALUOut_reg[15]_fret_fret
+		MEM_WB/WB_ALUOut_reg[16]_fret
+		MEM_WB/WB_ALUOut_reg[16]_fret_fret
+		MEM_WB/WB_ALUOut_reg[20]_fret
+		MEM_WB/WB_ALUOut_reg[21]_fret
+		MEM_WB/WB_ALUOut_reg[22]_fret
+		MEM_WB/WB_ALUOut_reg[23]_fret
+		MEM_WB/WB_ALUOut_reg[24]_fret
+		MEM_WB/WB_ALUOut_reg[25]_fret
+		MEM_WB/WB_ALUOut_reg[26]_fret
+		MEM_WB/WB_ALUOut_reg[27]_fret
+		MEM_WB/WB_ALUOut_reg[28]_fret
+		MEM_WB/WB_ALUOut_reg[31]_fret
+		MEM_WB/WB_ALUOut_reg[3]_fret
+		MEM_WB/WB_ALUOut_reg[4]_fret
+		MEM_WB/WB_ALUOut_reg[5]_fret
+		MEM_WB/WB_ALUOut_reg[6]_fret
+		MEM_WB/WB_ALUOut_reg[7]_fret
+		MEM_WB/WB_ALUOut_reg[8]_fret
+		MEM_WB/WB_ALUOut_reg[9]_fret
+		MEM_WB/WB_MemtoReg_reg_fret
+		MEM_WB/WB_MemtoReg_reg_fret__0
+		MEM_WB/WB_MemtoReg_reg_fret__1
+		MEM_WB/WB_MemtoReg_reg_fret__2
+		MEM_WB/WB_MemtoReg_reg_fret__3
+		MEM_WB/WB_MemtoReg_reg_fret__4
+		MEM_WB/WB_MemtoReg_reg_fret_fret
+		MEM_WB/WB_RegDest_reg[2]_fret
+		MEM_WB/WB_RegDest_reg[2]_fret_fret
+ 
+
+INFO: [Synth 8-5816] Retiming module `CPU' done
+
+
+WARNING: [Synth 8-3332] Sequential element (MEM_WB/WB_RegDest_reg[2]_fret__0) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM/MEM_RegDest_reg[3]_fret__0) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (EX_MEM/MEM_RegDest_reg[1]_fret) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (ID_EX/rt_reg[2]_fret) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (ID_EX/rt_reg[2]_fret__0) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (ID_EX/rt_reg[1]_fret) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (ID_EX/ALUSrc1_reg_fret_fret) is unused and will be removed from module CPU.
+INFO: [Synth 8-6837] The timing for the instance data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance data_memory_inst/RAM_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    59|
+|3     |LUT1     |    30|
+|4     |LUT2     |   103|
+|5     |LUT3     |   180|
+|6     |LUT4     |   252|
+|7     |LUT5     |   352|
+|8     |LUT6     |  1361|
+|9     |MUXF7    |   279|
+|10    |MUXF8    |    79|
+|11    |RAMB18E1 |     1|
+|12    |FDCE     |  1011|
+|13    |FDPE     |    13|
+|14    |FDRE     |   479|
+|15    |FDSE     |    40|
+|16    |IBUF     |     2|
+|17    |OBUF     |    20|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------------------------+---------------------------+------+
+|      |Instance                                |Module                     |Cells |
++------+----------------------------------------+---------------------------+------+
+|1     |top                                     |                           |  4262|
+|2     |  EX_MEM                                |EXMEMR                     |   295|
+|3     |  EXs                                   |EX                         |    12|
+|4     |    alu1                                |ALU                        |    12|
+|5     |  ID_EX                                 |IDEXR                      |  1044|
+|6     |  IDs                                   |ID                         |  1876|
+|7     |    register_file1                      |RegisterFile               |  1876|
+|8     |  IF_ID                                 |IFIDR                      |   283|
+|9     |  MEM_WB                                |MEMWBR                     |   198|
+|10    |  MEMs                                  |MEM                        |   196|
+|11    |    SortData_inst                       |SortData                   |    30|
+|12    |      dist_mem_gen_0                    |SortData_dist_mem_gen_0_0  |    30|
+|13    |        U0                              |dist_mem_gen_v8_0_13       |    30|
+|14    |          \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_13_synth |    30|
+|15    |            \gen_rom.rom_inst           |rom                        |    30|
+|16    |  WBs                                   |WB                         |    32|
+|17    |  data_memory_inst                      |DataMemory                 |     1|
+|18    |  pc                                    |PC                         |   254|
++------+----------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 179 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1101.340 ; gain = 477.898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.340 ; gain = 593.484
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 418 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1101.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1101.340 ; gain = 808.309
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1101.340 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/youzq/test/Pipeline/exp04.runs/synth_2/CPU.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  8 12:05:39 2019...

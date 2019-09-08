@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../exp04.ip_user_files/bd/SortData/ip/SortData_dist_mem_gen_0_0/sim/SortData_dist_mem_gen_0_0.v" \
+"../../../../exp04.ip_user_files/bd/SortData/sim/SortData.v" \
+"../../../../src/ALU.v" \
+"../../../../src/ALUControl.v" \
+"../../../../src/CPU.v" \
+"../../../../src/Control.v" \
+"../../../../src/DataMemory.v" \
+"../../../../src/EX.v" \
+"../../../../src/Forward.v" \
+"../../../../src/ID.v" \
+"../../../../src/IF.v" \
+"../../../../src/InstructionMemory.v" \
+"../../../../src/MEM.v" \
+"../../../../src/PC.v" \
+"../../../../src/RegisterFile.v" \
+"../../../../src/StateRegisters.v" \
+"../../../../src/WB.v" \
+"../../../../src/hazardjump.v" \
+"../../../../src/test_cpu.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
