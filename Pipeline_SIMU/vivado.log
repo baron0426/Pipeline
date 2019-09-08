@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep  8 09:03:08 2019
+# Process ID: 39156
+# Current directory: D:/youzq/Pipeline/Pipeline_SIMU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27308 D:\youzq\Pipeline\Pipeline_SIMU\Pipeline_SIMU.xpr
+# Log file: D:/youzq/Pipeline/Pipeline_SIMU/vivado.log
+# Journal file: D:/youzq/Pipeline/Pipeline_SIMU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/youzq/Pipeline/Pipeline_SIMU/Pipeline_SIMU.xpr
+INFO: [Project 1-313] Project file moved from 'D:/youzq/Pipeline/Pipeline/Pipeline_SIMU' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1663] The design 'SortData.bd' cannot be modified due to following reason(s):
+* Project is read-only. Please run 'save_project_as' before making any change to the bd-design. 
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'SortData.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+SortData_dist_mem_gen_0_0
+
+WARNING: [Project 1-229] Project 'Pipeline_SIMU.xpr' is read-only and therefore could not be upgraded for this version of Vivado.  Use 'File | Save Project As...' if you wish to save an upgraded copy.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 682.004 ; gain = 60.801
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  8 09:04:10 2019...
