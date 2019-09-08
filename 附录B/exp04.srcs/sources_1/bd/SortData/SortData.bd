@@ -1,0 +1,77 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD9032846D9032846",
+      "device": "xc7a35tcpg236-3",
+      "name": "SortData",
+      "synth_flow_mode": "None",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dist_mem_gen_0": ""
+    },
+    "ports": {
+      "Address": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "MemOut": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "dist_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:dist_mem_gen:8.0",
+        "xci_name": "SortData_dist_mem_gen_0_0",
+        "parameters": {
+          "coefficient_file": {
+            "value": "../../../../../../ain.coe"
+          },
+          "data_width": {
+            "value": "32"
+          },
+          "default_data_radix": {
+            "value": "16"
+          },
+          "depth": {
+            "value": "256"
+          },
+          "input_options": {
+            "value": "non_registered"
+          },
+          "memory_type": {
+            "value": "rom"
+          },
+          "output_options": {
+            "value": "non_registered"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Address_1": {
+        "ports": [
+          "Address",
+          "dist_mem_gen_0/a"
+        ]
+      },
+      "dist_mem_gen_0_spo": {
+        "ports": [
+          "dist_mem_gen_0/spo",
+          "MemOut"
+        ]
+      }
+    }
+  }
+}

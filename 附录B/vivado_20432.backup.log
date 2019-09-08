@@ -1,0 +1,181 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep  8 09:04:14 2019
+# Process ID: 20432
+# Current directory: D:/youzq/test/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent532 D:\youzq\test\Pipeline\exp04.xpr
+# Log file: D:/youzq/test/Pipeline/vivado.log
+# Journal file: D:/youzq/test/Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/youzq/test/Pipeline/exp04.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim/SortData_dist_mem_gen_0_0.mif'
+INFO: [SIM-utils-43] Exported 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim/ain.coe'
+INFO: [SIM-utils-43] Exported 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim/SortData_dist_mem_gen_0_0.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/exp04.ip_user_files/bd/SortData/ip/SortData_dist_mem_gen_0_0/sim/SortData_dist_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData_dist_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/exp04.ip_user_files/bd/SortData/sim/SortData.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SortData
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/Forward.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/StateRegisters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFIDR
+INFO: [VRFC 10-311] analyzing module IDEXR
+INFO: [VRFC 10-311] analyzing module EXMEMR
+INFO: [VRFC 10-311] analyzing module MEMWBR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/hazardjump.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardJumpUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/src/test_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim'
+"xelab -wto b99b8c95232349d6a87c827e32857e37 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_cpu_behav xil_defaultlib.test_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b99b8c95232349d6a87c827e32857e37 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_cpu_behav xil_defaultlib.test_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.HazardJumpUnit
+Compiling module xil_defaultlib.ForwardingUnit
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.IFIDR
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.ALUControl
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.IDEXR
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.EXMEMR
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.SortData_dist_mem_gen_0_0
+Compiling module xil_defaultlib.SortData
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEMWBR
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.test_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_cpu_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim/xsim.dir/test_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep  8 09:06:19 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 795.797 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/youzq/test/Pipeline/exp04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_cpu_behav -key {Behavioral:sim_1:Functional:test_cpu} -tclbatch {test_cpu.tcl} -protoinst "protoinst_files/SortData.protoinst" -view {D:/youzq/test/Pipeline/test_cpu_behav_sum.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/SortData.protoinst
+Time resolution is 1 ps
+open_wave_config D:/youzq/test/Pipeline/test_cpu_behav_sum.wcfg
+open_wave_config: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 823.656 ; gain = 0.000
+source test_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1800ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time                70000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               310000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               440000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               570000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               700000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               830000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time               960000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1090000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1220000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1350000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1480000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1610000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+WARNING in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst at time              1740000 ns: 
+Reading from out-of-range address. Max address in test_cpu.cpu1.MEMs.SortData_inst.dist_mem_gen_0.inst is         255
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 823.656 ; gain = 27.859
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1800ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 823.656 ; gain = 38.082
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  8 09:06:40 2019...
